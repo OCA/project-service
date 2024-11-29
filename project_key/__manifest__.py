@@ -5,7 +5,7 @@
     "name": "Project Key",
     "summary": "Module decorates projects and tasks with Project Key",
     "category": "Project",
-    "version": "16.0.1.0.2",
+    "version": "18.0.1.0.0",
     "license": "LGPL-3",
     "author": "Modoolar, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/project",

@@ -10,17 +10,17 @@
         <field name="inherit_id" ref="project.edit_project" />
         <field name="arch" type="xml">
             <field name="partner_id" position="before">
-                <field name="key" required="1" />
+                <field name="key" required="True" />
             </field>
         </field>
     </record>
     <record id="view_project_extend_with_key" model="ir.ui.view">
-        <field name="name">project.project.tree</field>
+        <field name="name">project.project.list</field>
         <field name="model">project.project</field>
         <field name="inherit_id" ref="project.view_project" />
         <field name="arch" type="xml">
             <field name="name" position="after">
-                <field name="key" required="0" readonly="1" />
+                <field name="key" readonly="True" />
             </field>
         </field>
     </record>
@@ -42,12 +42,12 @@
         <field name="inherit_id" ref="project.view_task_form2" />
         <field name="arch" type="xml">
             <field name="name" position="before">
-                <field name="key" readonly="1" nolabel="1" class="oe_read_only" />
+                <field name="key" readonly="True" nolabel="1" class="oe_read_only" />
             </field>
         </field>
     </record>
     <record id="view_task_tree2_extend_with_key" model="ir.ui.view">
-        <field name="name">project.task.tree</field>
+        <field name="name">project.task.list</field>
         <field name="model">project.task</field>
         <field name="inherit_id" ref="project.view_task_tree2" />
         <field eval="2" name="priority" />
@@ -78,10 +78,7 @@
                 <field name="url" />
                 <field name="key" />
             </field>
-            <xpath
-                expr="//t[@t-name='kanban-box']//field[@name='name']/parent::s/parent::strong"
-                position="before"
-            >
+            <xpath expr="//t[@t-name='card']//field[@name='name']" position="before">
                 <a t-att-href="record.url.raw_value">
                     <field name="key" />
                 </a>
@@ -96,19 +93,6 @@
             <div name="alias_def" position="after">
                 <field name="key" />
             </div>
-        </field>
-    </record>
-    <record id="view_project_kanban_details" model="ir.ui.view">
-        <field name="name">project.project.kanban</field>
-        <field name="model">project.project</field>
-        <field name="inherit_id" ref="project.view_project_kanban" />
-        <field name="arch" type="xml">
-            <field name="display_name" position="after">
-                <field name="key" />
-            </field>
-            <xpath expr="//t[@t-esc='record.display_name.value']" position="before">
-                <t t-esc="record.key.value" />  -
-            </xpath>
         </field>
     </record>
 </odoo>

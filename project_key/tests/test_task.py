@@ -19,7 +19,7 @@ class TestTask(TestCommon):
 
     def test_03_create_task_project_in_context(self):
         self.Task.with_context(
-            active_model="project.project", active_id=self.project_1.id
+            active_model="project.project", id=self.project_1.id
         ).create({"name": "4"})
 
     def test_04_no_switch_project(self):
@@ -33,11 +33,11 @@ class TestTask(TestCommon):
         self.assertEqual(self.task12.key, "ODOO-3")
 
     def test_06_name_search(self):
-        oca_tasks = self.Task.name_search("OCA")
+        oca_tasks = self.Task.name_search("OCA-")
         self.assertEqual(len(oca_tasks), 2)
 
         non_oca_task_ids = [
-            x[0] for x in self.Task.name_search("OCA", operator="not ilike")
+            x[0] for x in self.Task.name_search("OCA-", operator="not ilike")
         ]
 
         oca_tasks = self.Task.browse(non_oca_task_ids).filtered(
