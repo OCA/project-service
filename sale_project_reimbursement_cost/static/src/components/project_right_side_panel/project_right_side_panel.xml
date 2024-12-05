@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<templates id="template" xml:space="preserve">
+
+    <t
+        t-name="sale_project_reimbursement_cost.ProjectRightSidePanel"
+        t-inherit="project.ProjectRightSidePanel"
+        t-inherit-mode="extension"
+    >
+        <xpath
+            expr="//ProjectRightSidePanelSection[@name=&quot;'profitability'&quot;]"
+            position="before"
+        >
+            <ProjectRightSidePanelSection
+                name="'provisions'"
+                show="state.data.provision_items?.data?.length &gt; 0"
+                dataClassName="'py-3'"
+            >
+                <t t-set-slot="title">
+                    Provisions
+                </t>
+                <t t-set="total_provision" t-value="0" />
+                <table class="table table-sm table-striped table-hover mb-0">
+                    <thead class="bg-100">
+                        <tr>
+                            <th>Provision</th>
+                            <th class="text-end">Date</th>
+                            <th class="text-end">Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr
+                            t-foreach="state.data.provision_items.data"
+                            t-as="provision_item"
+                            t-key="provision_item.id"
+                        >
+                            <t
+                                t-set="total_provision"
+                                t-value="total_provision+provision_item.amount"
+                            />
+                            <td>
+                                <t t-set="item_name" t-value="provision_item.name" />
+                                <a
+                                    class="o_rightpanel_button"
+                                    href="#"
+                                    t-on-click="() => this.onReimbursementItemActionClick(provision_item.action)"
+                                >
+                                    <t t-out="item_name" />
+                                </a>
+                            </td>
+                            <td class="text-end align-middle">
+                                <t t-out="provision_item.date" />
+                            </td>
+                            <td class="text-end align-middle">
+                                <t t-out="formatMonetary(provision_item.amount)" />
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr class="fw-bolder">
+                            <td>Total</td>
+                            <td />
+                            <td class="text-end"><t
+                                    t-out="formatMonetary(total_provision)"
+                                /></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </ProjectRightSidePanelSection>
+        </xpath>
+    </t>
+
+</templates>
