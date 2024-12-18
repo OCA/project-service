@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_project_project_filter" model="ir.ui.view">
+        <field name="name">project.status.filter</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.view_project_project_filter" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <separator />
+                <filter
+                    string="Not Closed"
+                    name="not_closed"
+                    domain="['|',('stage_id.is_closed', '=', False),('stage_id', '=', False)]"
+                />
+                <filter
+                    string="Closed"
+                    name="is_closed"
+                    domain="[('stage_id.is_closed', '=', True)]"
+                />
+            </xpath>
+        </field>
+    </record>
+</odoo>

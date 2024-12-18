@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="project_project_stage_view_list" model="ir.ui.view">
+        <field name="name">project.project.stage.view.list</field>
+        <field name="model">project.project.stage</field>
+        <field name="inherit_id" ref="project.project_project_stage_view_tree" />
+        <field name="arch" type="xml">
+            <field name="fold" position="after">
+                <field name="description" />
+                <field name="is_closed" />
+            </field>
+        </field>
+    </record>
+</odoo>
