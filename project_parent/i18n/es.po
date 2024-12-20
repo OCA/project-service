@@ -1,0 +1,60 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * project_parent
+#
+# Translators:
+# enjolras <yo@miguelrevilla.com>, 2018
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-02 01:51+0000\n"
+"PO-Revision-Date: 2023-10-12 15:38+0000\n"
+"Last-Translator: Ivorra78 <informatica@totmaterial.es>\n"
+"Language-Team: Spanish (https://www.transifex.com/oca/teams/23907/es/)\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17\n"
+
+#. module: project_parent
+#: model:ir.model.fields,field_description:project_parent.field_project_project__child_ids_count
+msgid "Child Ids Count"
+msgstr "Recuento de ID de niños"
+
+#. module: project_parent
+#: model_terms:ir.ui.view,arch_db:project_parent.edit_project
+msgid "Child Projects"
+msgstr "Proyectos Hijos"
+
+#. module: project_parent
+#: model:ir.model.fields,field_description:project_parent.field_project_project__parent_path
+msgid "Parent Path"
+msgstr "Ruta Parental"
+
+#. module: project_parent
+#: model:ir.model.fields,field_description:project_parent.field_project_project__parent_id
+#: model_terms:ir.ui.view,arch_db:project_parent.view_project_project_filter
+msgid "Parent Project"
+msgstr "Proyecto Padre"
+
+#. module: project_parent
+#: model:ir.model,name:project_parent.model_project_project
+msgid "Project"
+msgstr "Proyecto"
+
+#. module: project_parent
+#: model:ir.model.fields,field_description:project_parent.field_project_project__child_ids
+msgid "Sub-projects"
+msgstr "Sub-proyectos"
+
+#~ msgid "Analytic Account"
+#~ msgstr "Cuenta analítica"
+
+#~ msgid "Parent"
+#~ msgstr "Padre"
+
+#~ msgid "WBS element"
+#~ msgstr "WBS elemento"
