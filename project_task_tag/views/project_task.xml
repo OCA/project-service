@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_task_form2" model="ir.ui.view">
+        <field name="name">project.task.allowed_tags.form.inherit</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2" />
+        <field name="arch" type="xml">
+            <field name="tag_ids" position="attributes">
+                <attribute
+                    name="domain"
+                >['|', (not project_id and 1 or 0, '=', 1), ('project_ids', 'in', project_id)]</attribute>
+                <!-- make sure there is no project key in context, as it is used in name_search -->
+                <attribute name="context">{}</attribute>
+            </field>
+        </field>
+    </record>
+</odoo>
