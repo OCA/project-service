@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="project_project_view_form_simplified_stage" model="ir.ui.view">
+        <field name="name">project.project.view.form.simplified.stage</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.project_project_view_form_simplified" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <div class="oe_title">
+                    <label for="type_ids" string="Task Stages" />
+                    <field
+                        name="type_ids"
+                        domain="[('user_id', '=', False)]"
+                        widget="many2many_tags"
+                    />
+                </div>
+            </field>
+        </field>
+    </record>
+
+    <record id="project_project_view_form_inherit_stages" model="ir.ui.view">
+        <field name="name">project.form.inherit.stages</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project" />
+        <field name="arch" type="xml">
+            <page name="description" position="after">
+                <page name="stage" string="Task Stages">
+                    <field name="type_ids" domain="[('user_id', '=', False)]">
+                        <list editable="bottom">
+                            <field name="sequence" widget="handle" optional="show" />
+                            <field name="name" />
+                            <field name="fold" optional="show" />
+                            <field name="mail_template_id" optional="show" />
+                            <field name="rating_template_id" optional="show" />
+                            <field name="auto_validation_state" optional="hide" />
+                        </list>
+                    </field>
+                </page>
+            </page>
+        </field>
+    </record>
+</odoo>
