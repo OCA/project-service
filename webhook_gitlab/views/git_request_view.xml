@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model='ir.ui.view' id='git_request_tree'>
+        <field name='name'>git_request.tree</field>
+        <field name='model'>git.request</field>
+        <field name='arch' type='xml'>
+            <tree
+                decoration-danger="ci_status=='failed'"
+                decoration-info="ci_status=='pending'"
+                decoration-success="ci_status=='success'"
+                decoration-muted="ci_status in ['skipped', 'canceled']"
+                decoration-primary="ci_status=='running'"
+            >
+                <field name="id_request" />
+                <field name="user_id" />
+                <field name="branch" />
+                <field name="name" />
+                <field name="wip" />
+                <field name="approved" />
+                <field name="state" />
+                <field name="ci_status" />
+                <button name="open_merge_request" icon="fa-gitlab" string="Open Merge Request" type="object" />
+            </tree>
+        </field>
+    </record>
+</odoo>

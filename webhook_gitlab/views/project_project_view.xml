@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="project_project_view_form" model="ir.ui.view">
+        <field name="name">project.project.view.form</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='alias_contact']" position="after">
+                <field name="git_project_url" widget="url" />
+                <field name="git_dev_project_url" widget="url" />
+                <button name="create_project_webhook" string="Create Webhooks" type="object" />
+                <button name="retry_odoo_sh_deploy_job" string="Update Odoo.sh" type="object" />
+            </xpath>
+        </field>
+    </record>
+    <record id="project_project_view_kanban" model="ir.ui.view">
+        <field name="name">project.project.view.kanban</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.view_project_kanban" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='tag_ids']" position="after">
+                <field name="git_project_url" />
+                <field name="git_dev_project_url" />
+            </xpath>
+            <xpath expr="//field[@widget='many2many_tags']" position="after">
+                <t t-if="record.git_project_url.value">
+                    <div class="text-muted o_row">
+                        <span>Prod: </span>
+                        <field name="git_project_url" widget="url" />
+                    </div>
+                </t>
+                <t t-if="record.git_dev_project_url.value">
+                    <div class="text-muted o_row">
+                        <span>Dev: </span>
+                        <field name="git_dev_project_url" widget="url" />
+                    </div>
+                </t>
+            </xpath>
+        </field>
+    </record>
+</odoo>

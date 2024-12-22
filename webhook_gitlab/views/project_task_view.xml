@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="project_task_form">
+        <field name="name">project_task.form</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2" />
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Merge Requests" invisible="not git_request_ids">
+                    <field name="git_request_ids" />
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="project_tags_opened" model="project.tags">
+        <field name="name">MR: Opened</field>
+        <field name="color">8</field>
+    </record>
+    <record id="project_tags_merged" model="project.tags">
+        <field name="name">MR: Merged</field>
+        <field name="color">10</field>
+    </record>
+    <record id="project_tags_closed" model="project.tags">
+        <field name="name">MR: Closed</field>
+        <field name="color">2</field>
+    </record>
+    <record id="project_tags_locked" model="project.tags">
+        <field name="name">MR: Locked</field>
+        <field name="color">2</field>
+    </record>
+    <record id="project_tags_wip" model="project.tags">
+        <field name="name">WIP</field>
+        <field name="color">11</field>
+    </record>
+    <record id="project_tags_approved" model="project.tags">
+        <field name="name">Approved</field>
+        <field name="color">9</field>
+    </record>
+    <record id="project_tags_pending" model="project.tags">
+        <field name="name">CI: Pending</field>
+        <field name="color">4</field>
+    </record>
+    <record id="project_tags_running" model="project.tags">
+        <field name="name">CI: Running</field>
+        <field name="color">8</field>
+    </record>
+    <record id="project_tags_success" model="project.tags">
+        <field name="name">CI: Success</field>
+        <field name="color">10</field>
+    </record>
+    <record id="project_tags_failed" model="project.tags">
+        <field name="name">CI: Failed</field>
+        <field name="color">1</field>
+    </record>
+    <record id="project_tags_skipped" model="project.tags">
+        <field name="name">CI: Skipped</field>
+        <field name="color">3</field>
+    </record>
+    <record id="project_tags_canceled" model="project.tags">
+        <field name="name">CI: Canceled</field>
+        <field name="color">1</field>
+    </record>
+    <record id="project_tags_unknown" model="project.tags">
+        <field name="name">CI: Unknown</field>
+        <field name="color">1</field>
+    </record>
+</odoo>
