@@ -1,0 +1,2 @@
+- Stéphane Mangin \<<stephane.mangin@camptocamp.com>\>
+- Maksym Yankin \<<maksym.yankin@camptocamp.com>\>
