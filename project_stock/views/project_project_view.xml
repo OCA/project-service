@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="edit_project" model="ir.ui.view">
+        <field name="name">project.project.form</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project" />
+        <field name="arch" type="xml">
+            <xpath expr="///group[@name='extra_settings']" position="before">
+                <group string="Stock" name="stock_misc" groups="stock.group_stock_user">
+                    <field name="picking_type_id" domain="[]" />
+                    <field
+                        name="location_id"
+                        groups="stock.group_stock_multi_locations"
+                    />
+                    <field
+                        name="location_dest_id"
+                        groups="stock.group_stock_multi_locations"
+                    />
+                    <field name="stock_analytic_date" />
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

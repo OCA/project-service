@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_task_form2" model="ir.ui.view">
+        <field name="name">project.task.form</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2" />
+        <field name="arch" type="xml">
+            <xpath expr="///button[@name='action_open_parent_task']" position="after">
+                <button
+                    name="%(action_project_task_moves)d"
+                    type="action"
+                    string="Product Moves"
+                    class="oe_stat_button"
+                    icon="fa-exchange"
+                    invisible="not done_stock_moves"
+                    groups="stock.group_stock_user"
+                />
+                <button
+                    class="oe_stat_button"
+                    name="action_see_move_scrap"
+                    type="object"
+                    icon="fa-arrows-v"
+                    invisible="not scrap_count"
+                    groups="stock.group_stock_user"
+                >
+                    <field name="scrap_count" widget="statinfo" string="Scraps" />
+                </button>
+            </xpath>
+            <xpath
+                expr="//field[@name='project_id'][@widget='project']"
+                position="after"
+            >
+                <field
+                    name="stock_analytic_account_id"
+                    groups="analytic.group_analytic_accounting"
+                    required="not project_id"
+                    invisible="not use_stock_moves"
+                />
+                <field
+                    name="stock_analytic_distribution"
+                    widget="analytic_distribution"
+                    groups="analytic.group_analytic_accounting"
+                    invisible="not use_stock_moves"
+                />
+                <field name="stock_analytic_date" />
+            </xpath>
+            <field name="stage_id" position="before">
+                <button
+                    name="action_confirm"
+                    string="Confirm materials"
+                    type="object"
+                    class="oe_highlight"
+                    invisible="not allow_moves_action_confirm"
+                    groups="stock.group_stock_user"
+                />
+                <button
+                    name="action_assign"
+                    string="Check availability materials"
+                    type="object"
+                    class="oe_highlight"
+                    invisible="not allow_moves_action_assign"
+                    groups="stock.group_stock_user"
+                />
+                <button
+                    name="button_scrap"
+                    type="object"
+                    string="Scrap"
+                    invisible="stock_state == 'done' or not done_stock_moves or not stock_moves_is_locked"
+                    groups="stock.group_stock_user"
+                />
+                <button
+                    name="action_cancel"
+                    type="object"
+                    string="Cancel Materials"
+                    invisible="stock_state in ('draft', 'cancel') or not done_stock_moves or not stock_moves_is_locked"
+                    groups="stock.group_stock_user"
+                />
+                <button
+                    name="action_done"
+                    type="object"
+                    string="Transfer Materials"
+                    invisible="stock_state != 'assigned' or not done_stock_moves or not stock_moves_is_locked"
+                    class="oe_highlight"
+                    groups="stock.group_stock_user"
+                />
+                <button
+                    name="action_toggle_stock_moves_is_locked"
+                    invisible="stock_state in ('draft', 'cancel') or not stock_moves_is_locked or not done_stock_moves"
+                    string="Unlock"
+                    groups="stock.group_stock_manager"
+                    type="object"
+                />
+                <button
+                    name="action_toggle_stock_moves_is_locked"
+                    invisible="stock_moves_is_locked or not done_stock_moves"
+                    string="Lock"
+                    class="oe_highlight"
+                    groups="stock.group_stock_manager"
+                    type="object"
+                />
+            </field>
+            <xpath expr="///page[@name='extra_info']" position="before">
+                <!-- Field without groups used as domain in stock_analytic_* fields !-->
+                <field name="use_stock_moves" invisible="1" />
+                <page
+                    name="stock_info"
+                    string="Stock Info"
+                    invisible="not use_stock_moves"
+                    groups="stock.group_stock_user"
+                >
+                    <field name="done_stock_moves" invisible="1" />
+                    <field name="stock_moves_is_locked" invisible="1" />
+                    <field name="stock_state" invisible="1" />
+                    <field name="allow_moves_action_confirm" invisible="1" />
+                    <field name="allow_moves_action_assign" invisible="1" />
+                    <field
+                        name="move_ids"
+                        context="{'tree_view_ref': 'project_stock.view_stock_move_raw_tree', 'form_view_ref':'stock.view_move_form', 'default_company_id': company_id, 'default_state': 'draft', 'default_raw_material_task_id': id}"
+                        readonly="done_stock_moves and stock_moves_is_locked"
+                    />
+                </page>
+            </xpath>
+            <xpath expr="///page[@name='extra_info']/group[1]" position="inside">
+                <group
+                    string="Stock Info"
+                    name="stock_info_misc"
+                    groups="stock.group_stock_user"
+                    invisible="not use_stock_moves"
+                >
+                    <field name="picking_type_id" />
+                    <field name="location_id" />
+                    <field name="location_dest_id" />
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

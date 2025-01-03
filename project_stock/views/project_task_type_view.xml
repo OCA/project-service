@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="task_type_edit" model="ir.ui.view">
+        <field name="name">project.task.type.form</field>
+        <field name="model">project.task.type</field>
+        <field name="inherit_id" ref="project.task_type_edit" />
+        <field name="arch" type="xml">
+            <field name="fold" position="after">
+                <field name="use_stock_moves" />
+                <field name="done_stock_moves" invisible="not use_stock_moves" />
+            </field>
+        </field>
+    </record>
+</odoo>
