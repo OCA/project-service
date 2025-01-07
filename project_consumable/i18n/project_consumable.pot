@@ -1,0 +1,312 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* project_consumable
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: project_consumable
+#: model_terms:ir.ui.view,arch_db:project_consumable.project_consumable_product_line_kanban
+msgid "<i class=\"fa fa-calendar\" role=\"img\" aria-label=\"Date\" title=\"Date\"/>"
+msgstr ""
+
+#. module: project_consumable
+#: model_terms:ir.ui.view,arch_db:project_consumable.project_invoice_form
+msgid "<span class=\"o_stat_text\">Consumable</span>"
+msgstr ""
+
+#. module: project_consumable
+#: model_terms:ir.ui.view,arch_db:project_consumable.project_consumable_product_line_kanban
+msgid "<strong>Quantity: </strong>"
+msgstr ""
+
+#. module: project_consumable
+#: model:ir.actions.act_window,name:project_consumable.act_project_consumable_product_line_all
+#: model:ir.ui.menu,name:project_consumable.menu_hr_product_tracking_all
+msgid "All Materials"
+msgstr ""
+
+#. module: project_consumable
+#: model_terms:ir.ui.view,arch_db:project_consumable.project_consumable_product_line_form
+msgid "Analytic Entry"
+msgstr ""
+
+#. module: project_consumable
+#: model:ir.model,name:project_consumable.model_account_analytic_line
+msgid "Analytic Line"
+msgstr ""
+
+#. module: project_consumable
+#: model:ir.model.fields,field_description:project_consumable.field_project_project__timesheet_ids
+msgid "Associated Timesheets"
+msgstr ""
+
+#. module: project_consumable
+#: model:ir.model.fields,field_description:project_consumable.field_product_product__project_ok
+#: model:ir.model.fields,field_description:project_consumable.field_product_template__project_ok
+msgid "Available in projects"
+msgstr ""
+
+#. module: project_consumable
+#: model:ir.ui.menu,name:project_consumable.timesheet_menu_report_consumable_by_project
+msgid "By Project"
+msgstr ""
+
+#. module: project_consumable
+#: model:ir.model.fields,help:project_consumable.field_product_product__project_ok
+#: model:ir.model.fields,help:project_consumable.field_product_template__project_ok
+msgid ""
+"Check this box to be able to link this product with analytic line and "
+"project or task. Product cost will be used and displayed in project "
+"dashboard as consumable cost. So you'll be able to analyse consumable "
+"products cost per project."
+msgstr ""
+
+#. module: project_consumable
+#: code:addons/project_consumable/models/project_project.py:0
+#, python-format
+msgid "Consumable"
+msgstr ""
+
+#. module: project_consumable
+#: model:ir.model.fields,field_description:project_consumable.field_project_profitability_report__consumable_cost
+msgid "Consumable Cost"
+msgstr ""
+
+#. module: project_consumable
+#: model:ir.model.fields,field_description:project_consumable.field_project_project__consumable_count
+msgid "Consumable Count"
+msgstr ""
+
+#. module: project_consumable
+#: model_terms:ir.ui.view,arch_db:project_consumable.timesheet_plan
+msgid "Consumable costs"
+msgstr ""
+
+#. module: project_consumable
+#: model:ir.actions.act_window,name:project_consumable.act_consumable_line_by_project
+msgid "Consumables"
+msgstr ""
+
+#. module: project_consumable
+#: model_terms:ir.ui.view,arch_db:project_consumable.timesheet_plan
+msgid "Costs from consumable consumbed by the project."
+msgstr ""
+
+#. module: project_consumable
+#: model_terms:ir.ui.view,arch_db:project_consumable.project_consumable_product_line_search
+msgid "Date"
+msgstr ""
+
+#. module: project_consumable
+#: code:addons/project_consumable/models/project_project.py:0
+#, python-format
+msgid "Days"
+msgstr ""
+
+#. module: project_consumable
+#: model:ir.model.fields,field_description:project_consumable.field_account_analytic_line__display_name
+#: model:ir.model.fields,field_description:project_consumable.field_product_template__display_name
+#: model:ir.model.fields,field_description:project_consumable.field_project_profitability_report__display_name
+#: model:ir.model.fields,field_description:project_consumable.field_project_project__display_name
+#: model:ir.model.fields,field_description:project_consumable.field_project_task__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: project_consumable
+#: model_terms:ir.ui.view,arch_db:project_consumable.project_consumable_product_line_search
+msgid "Group By"
+msgstr ""
+
+#. module: project_consumable
+#: code:addons/project_consumable/models/project_project.py:0
+#, python-format
+msgid "Hours"
+msgstr ""
+
+#. module: project_consumable
+#: model:ir.model.fields,field_description:project_consumable.field_account_analytic_line__id
+#: model:ir.model.fields,field_description:project_consumable.field_product_template__id
+#: model:ir.model.fields,field_description:project_consumable.field_project_profitability_report__id
+#: model:ir.model.fields,field_description:project_consumable.field_project_project__id
+#: model:ir.model.fields,field_description:project_consumable.field_project_task__id
+msgid "ID"
+msgstr ""
+
+#. module: project_consumable
+#: model:ir.model.fields,field_description:project_consumable.field_account_analytic_line____last_update
+#: model:ir.model.fields,field_description:project_consumable.field_product_template____last_update
+#: model:ir.model.fields,field_description:project_consumable.field_project_profitability_report____last_update
+#: model:ir.model.fields,field_description:project_consumable.field_project_project____last_update
+#: model:ir.model.fields,field_description:project_consumable.field_project_task____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: project_consumable
+#: model_terms:ir.ui.view,arch_db:project_consumable.project_consumable_product_line_graph
+#: model_terms:ir.ui.view,arch_db:project_consumable.project_consumable_product_line_pivot
+#: model_terms:ir.ui.view,arch_db:project_consumable.project_consumable_product_line_search
+msgid "Material"
+msgstr ""
+
+#. module: project_consumable
+#: model_terms:ir.ui.view,arch_db:project_consumable.project_consumable_product_line_graph
+#: model_terms:ir.ui.view,arch_db:project_consumable.project_consumable_product_line_pivot
+msgid "Material Costs"
+msgstr ""
+
+#. module: project_consumable
+#: model_terms:ir.ui.view,arch_db:project_consumable.project_consumable_product_line_search
+msgid "Material by Date"
+msgstr ""
+
+#. module: project_consumable
+#: model_terms:ir.ui.view,arch_db:project_consumable.project_consumable_product_line_tree
+msgid "Material consumption"
+msgstr ""
+
+#. module: project_consumable
+#: model:ir.actions.act_window,name:project_consumable.consumable_action_report_by_project
+msgid "Material/Consumable By Project"
+msgstr ""
+
+#. module: project_consumable
+#: model:ir.ui.menu,name:project_consumable.menu_timesheets_reports_consumables
+msgid "Materials/Consumables"
+msgstr ""
+
+#. module: project_consumable
+#: model:ir.actions.act_window,name:project_consumable.act_project_consumable_product_line
+#: model:ir.ui.menu,name:project_consumable.menu_hr_product_tracking
+#: model_terms:ir.ui.view,arch_db:project_consumable.project_consumable_product_line_search
+msgid "My Materials"
+msgstr ""
+
+#. module: project_consumable
+#: model_terms:ir.actions.act_window,help:project_consumable.consumable_action_report_by_project
+msgid "No activities found."
+msgstr ""
+
+#. module: project_consumable
+#: model_terms:ir.actions.act_window,help:project_consumable.act_project_consumable_product_line_all
+msgid "No material found. Let's add a new one!"
+msgstr ""
+
+#. module: project_consumable
+#: model_terms:ir.actions.act_window,help:project_consumable.act_project_consumable_product_line
+msgid "No products found. Let's start a new one!"
+msgstr ""
+
+#. module: project_consumable
+#: model:ir.model.fields,help:project_consumable.field_project_project__consumable_count
+msgid "Number of consumable lines collected."
+msgstr ""
+
+#. module: project_consumable
+#: model_terms:ir.ui.view,arch_db:project_consumable.project_consumable_product_line_search
+msgid "Product"
+msgstr ""
+
+#. module: project_consumable
+#: model:ir.model,name:project_consumable.model_product_template
+msgid "Product Template"
+msgstr ""
+
+#. module: project_consumable
+#: model:ir.model,name:project_consumable.model_project_project
+#: model_terms:ir.ui.view,arch_db:project_consumable.project_consumable_product_line_search
+msgid "Project"
+msgstr ""
+
+#. module: project_consumable
+#: model:ir.model,name:project_consumable.model_project_profitability_report
+msgid "Project Profitability Report"
+msgstr ""
+
+#. module: project_consumable
+#: model:ir.actions.act_window,name:project_consumable.material_action_project
+msgid "Project's Materials"
+msgstr ""
+
+#. module: project_consumable
+#: model_terms:ir.actions.act_window,help:project_consumable.act_consumable_line_by_project
+msgid "Record a new activity"
+msgstr ""
+
+#. module: project_consumable
+#: code:addons/project_consumable/models/project_project.py:0
+#: code:addons/project_consumable/models/project_project.py:0
+#, python-format
+msgid "Recorded"
+msgstr ""
+
+#. module: project_consumable
+#: model:ir.model,name:project_consumable.model_project_task
+#: model_terms:ir.ui.view,arch_db:project_consumable.project_consumable_product_line_search
+msgid "Task"
+msgstr ""
+
+#. module: project_consumable
+#: model:ir.actions.act_window,name:project_consumable.material_action_task
+msgid "Task's Materials"
+msgstr ""
+
+#. module: project_consumable
+#: model:ir.model.fields,field_description:project_consumable.field_project_task__timesheet_ids
+msgid "Timesheets"
+msgstr ""
+
+#. module: project_consumable
+#: model_terms:ir.ui.view,arch_db:project_consumable.project_consumable_product_line_tree
+msgid "Total"
+msgstr ""
+
+#. module: project_consumable
+#: model_terms:ir.actions.act_window,help:project_consumable.act_project_consumable_product_line
+msgid ""
+"Track consummed products by projects every day and analyse cost per "
+"projects."
+msgstr ""
+
+#. module: project_consumable
+#: model_terms:ir.actions.act_window,help:project_consumable.consumable_action_report_by_project
+msgid ""
+"Track your consumable products by projects every day and analyse associated "
+"cost."
+msgstr ""
+
+#. module: project_consumable
+#: model_terms:ir.actions.act_window,help:project_consumable.act_project_consumable_product_line_all
+msgid ""
+"Track your consumable products by projects every day and analyse costs."
+msgstr ""
+
+#. module: project_consumable
+#: model_terms:ir.actions.act_window,help:project_consumable.act_consumable_line_by_project
+msgid ""
+"Track your working hours by projects every day and invoice this time to your"
+" customers."
+msgstr ""
+
+#. module: project_consumable
+#: model_terms:ir.ui.view,arch_db:project_consumable.project_consumable_product_line_search
+msgid "User"
+msgstr ""
+
+#. module: project_consumable
+#: model_terms:ir.ui.view,arch_db:project_consumable.timesheet_plan
+msgid "and consumable costs"
+msgstr ""
+
+#. module: project_consumable
+#: model_terms:ir.ui.view,arch_db:project_consumable.project_invoice_form
+msgid "records"
+msgstr ""

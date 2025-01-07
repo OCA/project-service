@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="timesheet_plan" model="ir.ui.view">
+        <field name="inherit_id" ref="sale_timesheet.timesheet_plan" />
+        <field name="name">Timesheet Plan project consumable</field>
+        <field name="type">qweb</field>
+        <field name="model">project.project</field>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('o_title')]" position="inside">
+                <h2>and consumable costs</h2>
+            </xpath>
+            <xpath
+                expr="//div[hasclass('o_profitability_section')][last()]/div/table/tbody/tr[last()]"
+                position="before"
+            >
+                <tr t-if="dashboard['profit']['consumable_cost'] != 0">
+                    <td class="o_timesheet_plan_dashboard_cell">
+                        <t
+                            t-esc="dashboard['profit']['consumable_cost']"
+                            t-options='{"widget": "monetary", "display_currency": currency}'
+                        />
+                    </td>
+                    <td title="Costs from consumable consumbed by the project.">
+                        Consumable costs
+                    </td>
+                </tr>
+            </xpath>
+        </field>
+    </record>
+
+
+</odoo>

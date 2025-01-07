@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record
+        id="hr_timesheet.act_hr_timesheet_line_by_project"
+        model="ir.actions.act_window"
+    >
+        <field
+            name="domain"
+        >[('project_id', '!=', False), ('product_id', '=', False)]</field>
+    </record>
+
+    <record id="act_consumable_line_by_project" model="ir.actions.act_window">
+        <field name="name">Consumables</field>
+        <field name="res_model">account.analytic.line</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="project_consumable_product_line_tree_user" />
+        <field
+            name="domain"
+        >[('project_id', '!=', False), ('product_id', '!=', False)]</field>
+        <field
+            name="context"
+        >{"default_project_id": active_id, "search_default_project_id": [active_id]}</field>
+        <field name="search_view_id" ref="project_consumable_product_line_search" />
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Record a new activity
+          </p><p>
+            Track your working hours by projects every day and invoice this time to your customers.
+          </p>
+        </field>
+    </record>
+
+    <record id="project_invoice_form" model="ir.ui.view">
+        <field name="name">Inherit project form : Invoicing Data</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project" />
+        <field name="priority">20</field>
+        <field name="arch" type="xml">
+            <div name="button_box" position="inside">
+                <button
+                    class="oe_stat_button"
+                    name="%(act_consumable_line_by_project)d"
+                    type="action"
+                    icon="fa-copy"
+                    attrs="{'invisible': [('allow_timesheets', '=', False)]}"
+                    groups="hr_timesheet.group_hr_timesheet_user"
+                >
+                    <div class="o_field_widget o_stat_info">
+                        <div class="oe_inline">
+                            <span class="o_stat_value mr-1">
+                                <field
+                                    name="consumable_count"
+                                    widget="statinfo"
+                                    nolabel="1"
+                                /> records
+                            </span>
+                        </div>
+                        <span class="o_stat_text">Consumable</span>
+                    </div>
+                </button>
+            </div>
+        </field>
+    </record>
+
+</odoo>

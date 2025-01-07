@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="uom_category_coffee_capsule" model="uom.category">
+        <field name="name">Coffee capsule</field>
+    </record>
+    <record id="uom_cat_coffee_capsule_unit" model="uom.uom">
+        <field name="category_id" ref="uom_category_coffee_capsule" />
+        <field name="name">1 capsule</field>
+        <field name="factor" eval="1.0" />
+        <field name="uom_type">reference</field>
+    </record>
+    <record id="uom_cat_coffee_capsule_box_10" model="uom.uom">
+        <field name="category_id" ref="uom_category_coffee_capsule" />
+        <field name="name">10 capsules box</field>
+        <field name="factor_inv" eval="10" />
+        <field name="uom_type">bigger</field>
+    </record>
+    <record id="product_coffee_capsule" model="product.product">
+        <field name="sale_ok">False</field>
+        <field name="purchase_ok">True</field>
+        <field name="name">Coffee capsule</field>
+        <field name="standard_price">0.33</field>
+        <field name="type">consu</field>
+        <field name="categ_id" ref="product.product_category_consumable" />
+        <field name="uom_id" ref="uom_cat_coffee_capsule_unit" />
+        <field name="uom_po_id" ref="uom_cat_coffee_capsule_box_10" />
+    </record>
+</odoo>

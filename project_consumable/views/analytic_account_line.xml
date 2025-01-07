@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="hr_timesheet.act_hr_timesheet_line" model="ir.actions.act_window">
+        <field
+            name="domain"
+        >[('project_id', '!=', False), ('user_id', '=', uid), ('product_id', '=', False)]</field>
+    </record>
+
+    <record id="hr_timesheet.timesheet_action_task" model="ir.actions.act_window">
+        <field
+            name="domain"
+        >[('task_id', 'in', active_ids), ('product_id', '=', False)]</field>
+    </record>
+
+    <record id="hr_timesheet.timesheet_action_project" model="ir.actions.act_window">
+        <field
+            name="domain"
+        >[('project_id', 'in', active_ids), ('product_id', '=', False)]</field>
+    </record>
+
+    <record id="hr_timesheet.timesheet_action_all" model="ir.actions.act_window">
+        <field
+            name="domain"
+        >[('project_id', '!=', False), ('product_id', '=', False)]</field>
+    </record>
+
+    <record
+        id="sale_timesheet.timesheet_action_from_sales_order"
+        model="ir.actions.act_window"
+    >
+        <field
+            name="domain"
+        >[('project_id', '!=', False), ('product_id', '=', False)]</field>
+    </record>
+
+    <record
+        id="sale_timesheet.timesheet_action_plan_pivot"
+        model="ir.actions.act_window"
+    >
+        <field
+            name="domain"
+        >[('project_id', '!=', False), ('product_id', '=', False)]</field>
+    </record>
+
+    <record
+        id="sale_timesheet.timesheet_action_from_plan"
+        model="ir.actions.act_window"
+    >
+        <field
+            name="domain"
+        >[('project_id', '!=', False), ('product_id', '=', False)]</field>
+    </record>
+
+    <record id="project_consumable_product_line_tree" model="ir.ui.view">
+        <field name="name">account.analytic.line.tree.project_consumable</field>
+        <field name="model">account.analytic.line</field>
+        <field name="arch" type="xml">
+            <tree editable="top" sample="1">
+                <field name="user_id" invisible="1" />
+                <field name="date" />
+                <field
+                    name="project_id"
+                    required="1"
+                    options="{'no_create_edit': True}"
+                    context="{'form_view_ref': 'project.project_project_view_form_simplified',}"
+                />
+                <field
+                    name="task_id"
+                    optional="show"
+                    options="{'no_create_edit': True, 'no_open': True}"
+                    context="{'default_project_id': project_id}"
+                    domain="[('project_id', '=', project_id)]"
+                />
+                <field
+                    name="product_id"
+                    domain="[('project_ok', '=', True)]"
+                    options="{'no_create_edit': True, 'no_open': True}"
+                    required="1"
+                />
+                <field name="name" optional="show" required="0" />
+                <field name="unit_amount" required="1" sum="Total" />
+                <field name="product_uom_id" optional="show" groups="uom.group_uom" />
+                <field name="product_uom_category_id" invisible="1" />
+                <field name="company_id" invisible="1" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="project_consumable_product_line_tree_user" model="ir.ui.view">
+        <field
+            name="name"
+        >account.analytic.line.tree.project_consumable.with.user</field>
+        <field name="model">account.analytic.line</field>
+        <field name="inherit_id" ref="project_consumable_product_line_tree" />
+        <field name="mode">primary</field>
+        <field name="priority">10</field>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='user_id']" position="attributes">
+                <attribute name="invisible">0</attribute>
+                <attribute name="required">1</attribute>
+                <attribute name="widget">many2one_avatar_user</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="project_consumable_product_line_pivot" model="ir.ui.view">
+        <field name="name">account.analytic.line.project_consumable.pivot</field>
+        <field name="model">account.analytic.line</field>
+        <field name="arch" type="xml">
+            <pivot string="Material" sample="1">
+                <field name="user_id" type="row" />
+                <field name="date" interval="month" type="col" />
+                <field name="unit_amount" type="measure" />
+                <field name="amount" string="Material Costs" />
+            </pivot>
+        </field>
+    </record>
+
+    <record id="project_consumable_product_line_graph" model="ir.ui.view">
+        <field name="name">account.analytic.line.project_consumable.graph</field>
+        <field name="model">account.analytic.line</field>
+        <field name="arch" type="xml">
+            <graph string="Material" sample="1">
+                <field name="task_id" type="row" />
+                <field name="project_id" type="row" />
+                <field name="unit_amount" type="measure" />
+                <field name="amount" string="Material Costs" />
+            </graph>
+        </field>
+    </record>
+
+    <record id="project_consumable_product_line_form" model="ir.ui.view">
+        <field name="name">account.analytic.line.project_consumable.form</field>
+        <field name="model">account.analytic.line</field>
+        <field name="priority">1</field>
+        <field name="inherit_id" eval="False" />
+        <field name="arch" type="xml">
+            <form string="Analytic Entry">
+                <sheet string="Analytic Entry">
+                    <group>
+                        <group>
+                            <field name="date" />
+                            <field
+                                name="project_id"
+                                required="1"
+                                context="{'form_view_ref': 'project.project_project_view_form_simplified',}"
+                            />
+                            <field
+                                name="task_id"
+                                context="{'default_project_id': project_id}"
+                                domain="[('project_id', '=', project_id)]"
+                            />
+                            <field name="name" />
+                            <field
+                                name="company_id"
+                                groups="base.group_multi_company"
+                            />
+                        </group>
+                        <group>
+                            <field
+                                name="product_id"
+                                domain="[('project_ok', '=', True)]"
+                            />
+                            <field name="unit_amount" />
+                            <field name="product_uom_category_id" invisible="1" />
+                            <field
+                                name="product_uom_id"
+                                groups="uom.group_uom"
+                                class="oe_inline"
+                            />
+                            <field name="amount" />
+                            <field name="currency_id" invisible="1" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="project_consumable_product_line_form_user" model="ir.ui.view">
+        <field
+            name="name"
+        >account.analytic.line.project_consumable.form.with.user</field>
+        <field name="model">account.analytic.line</field>
+        <field name="inherit_id" ref="project_consumable_product_line_form" />
+        <field name="mode">primary</field>
+        <field name="priority">10</field>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='company_id']" position="before">
+                <field name="user_id" required="1" options='{"no_open": True}' />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="project_consumable_product_line_search" model="ir.ui.view">
+        <field name="name">account.analytic.line.project_consumable.search</field>
+        <field name="model">account.analytic.line</field>
+        <field name="arch" type="xml">
+            <search string="Material">
+                <field name="date" />
+                <field name="user_id" />
+                <field name="project_id" />
+                <field name="task_id" />
+                <field name="product_id" />
+                <field name="name" />
+                <filter
+                    name="mine"
+                    string="My Materials"
+                    domain="[('user_id', '=', uid)]"
+                />
+                <separator />
+                <filter name="month" string="Date" date="date" />
+                <group expand="0" string="Group By">
+                    <filter
+                        string="Project"
+                        name="groupby_project"
+                        domain="[]"
+                        context="{'group_by': 'project_id'}"
+                    />
+                    <filter
+                        string="Task"
+                        name="groupby_task"
+                        domain="[]"
+                        context="{'group_by': 'task_id'}"
+                    />
+                    <filter
+                        string="Product"
+                        name="groupby_product"
+                        domain="[]"
+                        context="{'group_by': 'product_id'}"
+                    />
+                    <filter
+                        string="Date"
+                        name="groupby_date"
+                        domain="[]"
+                        context="{'group_by': 'date'}"
+                        help="Material by Date"
+                    />
+                    <filter
+                        string="User"
+                        name="groupby_user"
+                        domain="[]"
+                        context="{'group_by': 'user_id'}"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record
+        id="project_consumable_product_line_search_my_material_search"
+        model="ir.ui.view"
+    >
+        <field name="name">account.analytic.line.project_consumable.search.user</field>
+        <field name="model">account.analytic.line</field>
+        <field name="inherit_id" ref="project_consumable_product_line_search" />
+        <field name="mode">primary</field>
+        <field name="priority">100</field>
+        <field name="arch" type="xml">
+            <field name="user_id" position="replace" />
+            <filter name="mine" position="replace" />
+            <filter name="groupby_user" position="replace" />
+        </field>
+    </record>
+
+    <record id="project_consumable_product_line_kanban" model="ir.ui.view">
+        <field name="name">account.analytic.line.project_consumable.kanban</field>
+        <field name="model">account.analytic.line</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile" sample="1">
+                <field name="date" />
+                <field name="user_id" />
+                <field name="name" />
+                <field name="project_id" />
+                <field name="product_id" domain="[('project_ok', '=', True)]" />
+                <field
+                    name="task_id"
+                    context="{'default_project_id': project_id}"
+                    domain="[('project_id', '=', project_id)]"
+                />
+                <field name="unit_amount" />
+                <field name="product_uom_id" optional="show" groups="uom.group_uom" />
+                <field name="product_uom_category_id" invisible="1" />
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click">
+                            <div class="row">
+                                <div class="col-2">
+                                    <img
+                                        t-att-src="kanban_image('res.users', 'image_128', record.user_id.raw_value)"
+                                        t-att-title="record.user_id.value"
+                                        t-att-alt="record.user_id.value"
+                                        class="o_image_40_cover float-left"
+                                    />
+                                </div>
+                                <div class="col-8">
+                                    <div>
+                                        <strong><t
+                                                t-esc="record.project_id.value"
+                                            /></strong>
+                                    </div>
+                                    <div class="text-muted">
+                                        <span>
+                                            <t t-esc="record.name.value" />
+                                        </span>
+                                        <div class="float-right" id="bottom_right" />
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <img
+                                        t-att-src="kanban_image('product.template', 'image_128', record.product_id.product_tmpl_id.raw_value)"
+                                        t-att-title="record.product_id.value"
+                                        t-att-alt="record.product_id.value"
+                                        class="o_image_40_cover float-right"
+                                    />
+                                </div>
+                            </div>
+                            <hr class="mt4 mb4" />
+                            <span>
+                                <i
+                                    class="fa fa-calendar"
+                                    role="img"
+                                    aria-label="Date"
+                                    title="Date"
+                                />
+                                <t t-esc="record.date.value" />
+                            </span>
+                            <span class="float-right">
+                                <strong>Quantity: </strong><field
+                                    name="unit_amount"
+                                /> <field
+                                    name="product_uom_id"
+                                    class="oe_inline"
+                                    groups="uom.group_uom"
+                                />
+                            </span>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <!--
+        Menus and Actions
+    -->
+    <record id="act_project_consumable_product_line" model="ir.actions.act_window">
+        <field name="name">My Materials</field>
+        <field name="res_model">account.analytic.line</field>
+        <field name="view_mode">tree,form,kanban</field>
+        <field
+            name="domain"
+        >[('project_id', '!=', False), ('user_id', '=', uid), ('product_id', '!=', False)]</field>
+        <field name="context">{
+            "search_default_week":1,
+        }</field>
+        <field
+            name="search_view_id"
+            ref="project_consumable_product_line_search_my_material_search"
+        />
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+            No products found. Let's start a new one!
+            </p>
+            <p>
+            Track consummed products by projects every day and analyse cost per projects.
+            </p>
+        </field>
+    </record>
+
+    <record
+        id="act_project_consumable_product_line_view_tree"
+        model="ir.actions.act_window.view"
+    >
+        <field name="view_mode">tree</field>
+        <field name="sequence" eval="4" />
+        <field name="view_id" ref="project_consumable_product_line_tree" />
+        <field name="act_window_id" ref="act_project_consumable_product_line" />
+    </record>
+
+    <record
+        id="act_project_consumable_product_line_view_form"
+        model="ir.actions.act_window.view"
+    >
+        <field name="view_mode">form</field>
+        <field name="sequence" eval="5" />
+        <field name="view_id" ref="project_consumable_product_line_form" />
+        <field name="act_window_id" ref="act_project_consumable_product_line" />
+    </record>
+
+    <record
+        id="act_project_consumable_product_line_view_kanban"
+        model="ir.actions.act_window.view"
+    >
+        <field name="view_mode">kanban</field>
+        <field name="sequence">6</field>
+        <field name="view_id" ref="project_consumable_product_line_kanban" />
+        <field name="act_window_id" ref="act_project_consumable_product_line" />
+    </record>
+
+    <menuitem
+        id="menu_hr_product_tracking"
+        name="My Materials"
+        parent="hr_timesheet.menu_hr_time_tracking"
+        action="act_project_consumable_product_line"
+        sequence="25"
+    />
+
+    <record id="material_action_task" model="ir.actions.act_window">
+        <field name="name">Task's Materials</field>
+        <field name="res_model">account.analytic.line</field>
+        <field
+            name="domain"
+        >[('task_id', 'in', active_ids), ('product_id', '!=', False)]</field>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="project_consumable_product_line_tree_user" />
+    </record>
+
+    <record id="material_action_project" model="ir.actions.act_window">
+        <field name="name">Project's Materials</field>
+        <field name="res_model">account.analytic.line</field>
+        <field
+            name="domain"
+        >[('project_id', 'in', active_ids), ('product_id', '!=', False)]</field>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="project_consumable_product_line_tree_user" />
+    </record>
+
+    <record id="act_project_consumable_product_line_all" model="ir.actions.act_window">
+        <field name="name">All Materials</field>
+        <field name="res_model">account.analytic.line</field>
+        <field name="view_mode">tree,form,pivot,graph,kanban</field>
+        <field name="search_view_id" ref="project_consumable_product_line_search" />
+        <field
+            name="domain"
+        >[('project_id', '!=', False), ('product_id', '!=', False)]</field>
+        <field name="context">{
+            'search_default_week':1,
+        }</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No material found. Let's add a new one!
+            </p>
+            <p>
+            Track your consumable products by projects every day and analyse costs.
+            </p>
+        </field>
+    </record>
+
+
+    <record
+        id="act_project_consumable_product_line_view_all_tree"
+        model="ir.actions.act_window.view"
+    >
+        <field name="sequence" eval="4" />
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="project_consumable_product_line_tree_user" />
+        <field name="act_window_id" ref="act_project_consumable_product_line_all" />
+    </record>
+
+    <record
+        id="act_project_consumable_product_line_all_form"
+        model="ir.actions.act_window.view"
+    >
+        <field name="sequence" eval="5" />
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="project_consumable_product_line_form_user" />
+        <field name="act_window_id" ref="act_project_consumable_product_line_all" />
+    </record>
+
+    <record
+        id="act_project_consumable_product_line_all_pivot"
+        model="ir.actions.act_window.view"
+    >
+        <field name="sequence" eval="6" />
+        <field name="view_mode">pivot</field>
+        <field name="view_id" ref="project_consumable_product_line_pivot" />
+        <field name="act_window_id" ref="act_project_consumable_product_line_all" />
+    </record>
+
+    <record
+        id="act_project_consumable_product_line_all_graph"
+        model="ir.actions.act_window.view"
+    >
+        <field name="sequence" eval="6" />
+        <field name="view_mode">graph</field>
+        <field name="view_id" ref="project_consumable_product_line_graph" />
+        <field name="act_window_id" ref="act_project_consumable_product_line_all" />
+    </record>
+
+    <record
+        id="act_project_consumable_product_line_all_kanban"
+        model="ir.actions.act_window.view"
+    >
+        <field name="view_mode">kanban</field>
+        <field name="sequence">7</field>
+        <field name="view_id" ref="hr_timesheet.view_kanban_account_analytic_line" />
+        <field name="act_window_id" ref="act_project_consumable_product_line_all" />
+    </record>
+
+    <menuitem
+        id="menu_hr_product_tracking_all"
+        name="All Materials"
+        parent="hr_timesheet.menu_hr_time_tracking"
+        groups="hr_timesheet.group_hr_timesheet_approver"
+        action="act_project_consumable_product_line_all"
+        sequence="30"
+    />
+</odoo>
