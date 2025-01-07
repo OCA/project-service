@@ -1,0 +1,157 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* project_status
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2020-03-31 10:14+0000\n"
+"Last-Translator: Matjaz Mozetic <matjaz@matmoz.si>\n"
+"Language-Team: none\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
+"%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 3.10\n"
+
+#. module: project_status
+#: model_terms:ir.ui.view,arch_db:project_status.view_project_project_filter
+msgid "Closed"
+msgstr "Zaključeno"
+
+#. module: project_status
+#: model:ir.model.fields,field_description:project_status.field_project_status__company_id
+msgid "Company"
+msgstr ""
+
+#. module: project_status
+#: model:project.status,name:project_status.project_status_complete
+msgid "Complete"
+msgstr "Opravljeno"
+
+#. module: project_status
+#: model:ir.model.fields,field_description:project_status.field_project_status__create_uid
+msgid "Created by"
+msgstr "Ustvaril"
+
+#. module: project_status
+#: model:ir.model.fields,field_description:project_status.field_project_status__create_date
+msgid "Created on"
+msgstr "Ustvarjeno"
+
+#. module: project_status
+#: model:ir.model.fields,field_description:project_status.field_project_status__description
+msgid "Description"
+msgstr "Opis"
+
+#. module: project_status
+#: model:ir.model.fields,field_description:project_status.field_project_project__display_name
+#: model:ir.model.fields,field_description:project_status.field_project_status__display_name
+msgid "Display Name"
+msgstr "Prikazani naziv"
+
+#. module: project_status
+#: model:ir.model.fields,field_description:project_status.field_project_status__fold
+msgid "Folded"
+msgstr "Prepognjeno"
+
+#. module: project_status
+#: model:ir.model.fields,field_description:project_status.field_project_project__id
+#: model:ir.model.fields,field_description:project_status.field_project_status__id
+msgid "ID"
+msgstr "ID"
+
+#. module: project_status
+#: model:project.status,name:project_status.project_status_in_progress
+msgid "In Progress"
+msgstr "V teku"
+
+#. module: project_status
+#: model:ir.model.fields,field_description:project_status.field_project_status__is_closed
+msgid "Is Closed Status"
+msgstr "V stanju zaključeno"
+
+#. module: project_status
+#: model:ir.model.fields,field_description:project_status.field_project_project____last_update
+#: model:ir.model.fields,field_description:project_status.field_project_status____last_update
+msgid "Last Modified on"
+msgstr "Zadnjič spremenjeno"
+
+#. module: project_status
+#: model:ir.model.fields,field_description:project_status.field_project_status__write_uid
+msgid "Last Updated by"
+msgstr "Zadnji posodobil"
+
+#. module: project_status
+#: model:ir.model.fields,field_description:project_status.field_project_status__write_date
+msgid "Last Updated on"
+msgstr "Zadnjič posodobljeno"
+
+#. module: project_status
+#: model:ir.model.fields,field_description:project_status.field_project_status__name
+msgid "Name"
+msgstr "Naziv"
+
+#. module: project_status
+#: model_terms:ir.ui.view,arch_db:project_status.view_project_project_filter
+msgid "Not Closed"
+msgstr "Nezaključeno"
+
+#. module: project_status
+#: model:project.status,name:project_status.project_status_pending
+msgid "Pending"
+msgstr "Na čakanju"
+
+#. module: project_status
+#: model:ir.model,name:project_status.model_project_project
+#, fuzzy
+msgid "Project"
+msgstr "Projektni status"
+
+#. module: project_status
+#: model:ir.model,name:project_status.model_project_status
+#: model:ir.model.fields,field_description:project_status.field_project_project__project_status
+msgid "Project Status"
+msgstr "Projektni status"
+
+#. module: project_status
+#: model:ir.actions.act_window,name:project_status.project_status_action
+#: model:ir.ui.menu,name:project_status.project_status_menu
+msgid "Project Statuses"
+msgstr "Projektni statusi"
+
+#. module: project_status
+#: model:project.status,description:project_status.project_status_complete
+msgid "Project has been completed."
+msgstr "Projekt je dokončan."
+
+#. module: project_status
+#: model:project.status,description:project_status.project_status_in_progress
+msgid "Project is currently initiated and being worked."
+msgstr "Projekt je zagnan in se dela na njem."
+
+#. module: project_status
+#: model:project.status,description:project_status.project_status_pending
+msgid "Project is new and being built. Has not been started yet."
+msgstr "Projekt je nov in se snuje. Ni še zagnan."
+
+#. module: project_status
+#: model:ir.model.fields,field_description:project_status.field_project_status__status_sequence
+msgid "Sequence"
+msgstr "Zaporedje"
+
+#. module: project_status
+#: model:ir.model.fields,help:project_status.field_project_status__is_closed
+msgid "Specify if this is a closing status."
+msgstr "Določite, če je to zaključni status."
+
+#. module: project_status
+#: model_terms:ir.ui.view,arch_db:project_status.view_project_project_filter
+msgid "Status"
+msgstr "Status"
+
+#~ msgid "WBS element"
+#~ msgstr "Projektni člen"

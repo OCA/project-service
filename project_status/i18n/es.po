@@ -1,0 +1,152 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* project_status
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2021-07-04 23:49+0000\n"
+"Last-Translator: Esteka Digital <social@esteka.com>\n"
+"Language-Team: none\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.3.2\n"
+
+#. module: project_status
+#: model_terms:ir.ui.view,arch_db:project_status.view_project_project_filter
+msgid "Closed"
+msgstr "Cerrado"
+
+#. module: project_status
+#: model:ir.model.fields,field_description:project_status.field_project_status__company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: project_status
+#: model:project.status,name:project_status.project_status_complete
+msgid "Complete"
+msgstr "Completo"
+
+#. module: project_status
+#: model:ir.model.fields,field_description:project_status.field_project_status__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: project_status
+#: model:ir.model.fields,field_description:project_status.field_project_status__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: project_status
+#: model:ir.model.fields,field_description:project_status.field_project_status__description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: project_status
+#: model:ir.model.fields,field_description:project_status.field_project_project__display_name
+#: model:ir.model.fields,field_description:project_status.field_project_status__display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: project_status
+#: model:ir.model.fields,field_description:project_status.field_project_status__fold
+msgid "Folded"
+msgstr "Replegado"
+
+#. module: project_status
+#: model:ir.model.fields,field_description:project_status.field_project_project__id
+#: model:ir.model.fields,field_description:project_status.field_project_status__id
+msgid "ID"
+msgstr "ID"
+
+#. module: project_status
+#: model:project.status,name:project_status.project_status_in_progress
+msgid "In Progress"
+msgstr "En progreso"
+
+#. module: project_status
+#: model:ir.model.fields,field_description:project_status.field_project_status__is_closed
+msgid "Is Closed Status"
+msgstr "Estado cerrado"
+
+#. module: project_status
+#: model:ir.model.fields,field_description:project_status.field_project_project____last_update
+#: model:ir.model.fields,field_description:project_status.field_project_status____last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: project_status
+#: model:ir.model.fields,field_description:project_status.field_project_status__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: project_status
+#: model:ir.model.fields,field_description:project_status.field_project_status__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: project_status
+#: model:ir.model.fields,field_description:project_status.field_project_status__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: project_status
+#: model_terms:ir.ui.view,arch_db:project_status.view_project_project_filter
+msgid "Not Closed"
+msgstr "No cerrado"
+
+#. module: project_status
+#: model:project.status,name:project_status.project_status_pending
+msgid "Pending"
+msgstr "Pendiente"
+
+#. module: project_status
+#: model:ir.model,name:project_status.model_project_project
+msgid "Project"
+msgstr "Proyecto"
+
+#. module: project_status
+#: model:ir.model,name:project_status.model_project_status
+#: model:ir.model.fields,field_description:project_status.field_project_project__project_status
+msgid "Project Status"
+msgstr "Estado del proyecto"
+
+#. module: project_status
+#: model:ir.actions.act_window,name:project_status.project_status_action
+#: model:ir.ui.menu,name:project_status.project_status_menu
+msgid "Project Statuses"
+msgstr "Estados del proyecto"
+
+#. module: project_status
+#: model:project.status,description:project_status.project_status_complete
+msgid "Project has been completed."
+msgstr "El proyecto se ha completado."
+
+#. module: project_status
+#: model:project.status,description:project_status.project_status_in_progress
+msgid "Project is currently initiated and being worked."
+msgstr "El proyecto está actualmente iniciado y en ejecución."
+
+#. module: project_status
+#: model:project.status,description:project_status.project_status_pending
+msgid "Project is new and being built. Has not been started yet."
+msgstr "El proyecto es nuevo y está en construcción. Aún no se ha iniciado."
+
+#. module: project_status
+#: model:ir.model.fields,field_description:project_status.field_project_status__status_sequence
+msgid "Sequence"
+msgstr "Secuencia"
+
+#. module: project_status
+#: model:ir.model.fields,help:project_status.field_project_status__is_closed
+msgid "Specify if this is a closing status."
+msgstr "Especifica si el estado es cerrado."
+
+#. module: project_status
+#: model_terms:ir.ui.view,arch_db:project_status.view_project_project_filter
+msgid "Status"
+msgstr "Estado"

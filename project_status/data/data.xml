@@ -1,0 +1,21 @@
+<odoo noupdate="1">
+    <record id="project_status_pending" forcecreate="False" model="project.status">
+        <field name="name">Pending</field>
+        <field name="company_id" eval="False" />
+        <field name="description">
+            Project is new and being built. Has not been started yet.
+        </field>
+    </record>
+    <record id="project_status_in_progress" forcecreate="False" model="project.status">
+        <field name="name">In Progress</field>
+        <field name="company_id" eval="False" />
+        <field name="description">
+            Project is currently initiated and being worked.
+        </field>
+    </record>
+    <record id="project_status_complete" forcecreate="False" model="project.status">
+        <field name="name">Complete</field>
+        <field name="company_id" eval="False" />
+        <field name="description">Project has been completed.</field>
+    </record>
+</odoo>
