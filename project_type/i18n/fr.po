@@ -95,6 +95,11 @@ msgid "Parent Type"
 msgstr "Type Parent"
 
 #. module: project_type
+#: model:ir.model.fields,field_description:project_type.field_project_type__sequence
+msgid "Priority"
+msgstr "Priorité"
+
+#. module: project_type
 #: model:ir.model,name:project_type.model_project_project
 msgid "Project"
 msgstr "Projet"

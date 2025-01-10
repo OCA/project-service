@@ -92,7 +92,12 @@ msgstr "Nom"
 #. module: project_type
 #: model:ir.model.fields,field_description:project_type.field_project_type__parent_id
 msgid "Parent Type"
-msgstr ""
+msgstr "Type parent"
+
+#. module: project_type
+#: model:ir.model.fields,field_description:project_type.field_project_type__sequence
+msgid "Priority"
+msgstr "Priorité"
 
 #. module: project_type
 #: model:ir.model,name:project_type.model_project_project
