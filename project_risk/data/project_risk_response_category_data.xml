@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2019 Onestein
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo noupdate="1">
+    <record
+        id="project_risk_response_category_avoid"
+        model="project.risk.response.category"
+    >
+        <field name="name">Avoid</field>
+    </record>
+    <record
+        id="project_risk_response_category_reduce"
+        model="project.risk.response.category"
+    >
+        <field name="name">Reduce</field>
+    </record>
+    <record
+        id="project_risk_response_category_fallback"
+        model="project.risk.response.category"
+    >
+        <field name="name">Fall back</field>
+    </record>
+    <record
+        id="project_risk_response_category_transfer"
+        model="project.risk.response.category"
+    >
+        <field name="name">Transfer</field>
+    </record>
+    <record
+        id="project_risk_response_category_accept"
+        model="project.risk.response.category"
+    >
+        <field name="name">Accept</field>
+    </record>
+    <record
+        id="project_risk_response_category_share"
+        model="project.risk.response.category"
+    >
+        <field name="name">Share</field>
+    </record>
+</odoo>

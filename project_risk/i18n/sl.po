@@ -1,0 +1,458 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* project_risk
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2023-04-12 13:34+0000\n"
+"Last-Translator: Matjaz Mozetic <matjaz@luxim.si>\n"
+"Language-Team: none\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
+"%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 4.14.1\n"
+
+#. module: project_risk
+#: model:ir.model.fields,field_description:project_risk.field_project_risk__message_needaction
+msgid "Action Needed"
+msgstr "Potrebno ukrepanje"
+
+#. module: project_risk
+#: model:ir.model.fields,field_description:project_risk.field_project_risk__actionee_id
+msgid "Actionee"
+msgstr "Zadolženi"
+
+#. module: project_risk
+#: model:ir.model.fields.selection,name:project_risk.selection__project_risk__state__active
+#: model_terms:ir.ui.view,arch_db:project_risk.project_risk_search_view
+msgid "Active"
+msgstr "Aktivno"
+
+#. module: project_risk
+#: model:ir.model.fields,field_description:project_risk.field_project_risk__message_attachment_count
+msgid "Attachment Count"
+msgstr "Št. priponk"
+
+#. module: project_risk
+#: model:ir.model.fields,field_description:project_risk.field_project_risk__project_risk_category_id
+msgid "Category"
+msgstr "Kategorija"
+
+#. module: project_risk
+#: model:ir.model.fields.selection,name:project_risk.selection__project_risk__state__closed
+#: model_terms:ir.ui.view,arch_db:project_risk.project_risk_form_view
+msgid "Closed"
+msgstr "Zaključeno"
+
+#. module: project_risk
+#: model:ir.model.fields,field_description:project_risk.field_project_risk__create_uid
+#: model:ir.model.fields,field_description:project_risk.field_project_risk_category__create_uid
+#: model:ir.model.fields,field_description:project_risk.field_project_risk_response__create_uid
+#: model:ir.model.fields,field_description:project_risk.field_project_risk_response_category__create_uid
+msgid "Created by"
+msgstr "Ustvaril"
+
+#. module: project_risk
+#: model:ir.model.fields,field_description:project_risk.field_project_risk__create_date
+#: model:ir.model.fields,field_description:project_risk.field_project_risk_category__create_date
+#: model:ir.model.fields,field_description:project_risk.field_project_risk_response__create_date
+#: model:ir.model.fields,field_description:project_risk.field_project_risk_response_category__create_date
+msgid "Created on"
+msgstr "Ustvarjeno"
+
+#. module: project_risk
+#: model:ir.model.fields.selection,name:project_risk.selection__project_risk__rating__10
+#: model_terms:ir.ui.view,arch_db:project_risk.project_risk_form_view
+msgid "Critical"
+msgstr "Kritično"
+
+#. module: project_risk
+#: model:ir.model.fields,field_description:project_risk.field_project_risk__description
+#: model:ir.model.fields,field_description:project_risk.field_project_risk_response__description
+#: model_terms:ir.ui.view,arch_db:project_risk.project_risk_form_view
+msgid "Description"
+msgstr "Opis"
+
+#. module: project_risk
+#: model:ir.model.fields,field_description:project_risk.field_project_risk__display_name
+#: model:ir.model.fields,field_description:project_risk.field_project_risk_category__display_name
+#: model:ir.model.fields,field_description:project_risk.field_project_risk_response__display_name
+#: model:ir.model.fields,field_description:project_risk.field_project_risk_response_category__display_name
+msgid "Display Name"
+msgstr "Prikazani naziv"
+
+#. module: project_risk
+#: model:ir.model.fields.selection,name:project_risk.selection__project_risk__state__draft
+#: model_terms:ir.ui.view,arch_db:project_risk.project_risk_form_view
+msgid "Draft"
+msgstr "Osnutek"
+
+#. module: project_risk
+#: model:ir.model.fields.selection,name:project_risk.selection__project_risk__impact__5
+msgid "Extreme"
+msgstr "Ekstremno"
+
+#. module: project_risk
+#: model:ir.model.fields,field_description:project_risk.field_project_risk__message_follower_ids
+msgid "Followers"
+msgstr "Sledilci"
+
+#. module: project_risk
+#: model:ir.model.fields,field_description:project_risk.field_project_risk__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Sledilci (kanali)"
+
+#. module: project_risk
+#: model:ir.model.fields,field_description:project_risk.field_project_risk__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Sledilci (partnerji)"
+
+#. module: project_risk
+#: model_terms:ir.ui.view,arch_db:project_risk.project_risk_search_view
+msgid "Group By..."
+msgstr "Združi po..."
+
+#. module: project_risk
+#: model:ir.model.fields.selection,name:project_risk.selection__project_risk__proximity__4
+#: model:ir.model.fields.selection,name:project_risk.selection__project_risk__rating__8
+#: model_terms:ir.ui.view,arch_db:project_risk.project_risk_form_view
+msgid "High"
+msgstr "Visoka"
+
+#. module: project_risk
+#: model:ir.model.fields,field_description:project_risk.field_project_risk__id
+#: model:ir.model.fields,field_description:project_risk.field_project_risk_category__id
+#: model:ir.model.fields,field_description:project_risk.field_project_risk_response__id
+#: model:ir.model.fields,field_description:project_risk.field_project_risk_response_category__id
+msgid "ID"
+msgstr "ID"
+
+#. module: project_risk
+#: model:ir.model.fields,help:project_risk.field_project_risk__message_needaction
+#: model:ir.model.fields,help:project_risk.field_project_risk__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Če označeno pomeni, da nova sporočila zahtevajo vašo pozornost."
+
+#. module: project_risk
+#: model:ir.model.fields,help:project_risk.field_project_risk__message_has_error
+#: model:ir.model.fields,help:project_risk.field_project_risk__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+"Če označeno pomeni, da je pri nekaterih sporočilih prišlo do napake pri "
+"dostavi."
+
+#. module: project_risk
+#: model:ir.model.fields.selection,name:project_risk.selection__project_risk__proximity__6
+msgid "Imminent"
+msgstr "Neizogibno"
+
+#. module: project_risk
+#: model:ir.model.fields,field_description:project_risk.field_project_risk__impact
+msgid "Impact"
+msgstr "Vpliv"
+
+#. module: project_risk
+#: model:ir.model.fields,field_description:project_risk.field_project_risk__message_is_follower
+msgid "Is Follower"
+msgstr "Je sledilec"
+
+#. module: project_risk
+#: model:ir.model.fields,field_description:project_risk.field_project_risk____last_update
+#: model:ir.model.fields,field_description:project_risk.field_project_risk_category____last_update
+#: model:ir.model.fields,field_description:project_risk.field_project_risk_response____last_update
+#: model:ir.model.fields,field_description:project_risk.field_project_risk_response_category____last_update
+msgid "Last Modified on"
+msgstr "Zadnjič spremenjeno"
+
+#. module: project_risk
+#: model:ir.model.fields,field_description:project_risk.field_project_risk__write_uid
+#: model:ir.model.fields,field_description:project_risk.field_project_risk_category__write_uid
+#: model:ir.model.fields,field_description:project_risk.field_project_risk_response__write_uid
+#: model:ir.model.fields,field_description:project_risk.field_project_risk_response_category__write_uid
+msgid "Last Updated by"
+msgstr "Zadnji posodobil"
+
+#. module: project_risk
+#: model:ir.model.fields,field_description:project_risk.field_project_risk__write_date
+#: model:ir.model.fields,field_description:project_risk.field_project_risk_category__write_date
+#: model:ir.model.fields,field_description:project_risk.field_project_risk_response__write_date
+#: model:ir.model.fields,field_description:project_risk.field_project_risk_response_category__write_date
+msgid "Last Updated on"
+msgstr "Zadnjič posodobljeno"
+
+#. module: project_risk
+#: model:ir.model.fields.selection,name:project_risk.selection__project_risk__probability__4
+msgid "Likely"
+msgstr "Verjetno"
+
+#. module: project_risk
+#: model:ir.model.fields.selection,name:project_risk.selection__project_risk__proximity__2
+#: model:ir.model.fields.selection,name:project_risk.selection__project_risk__rating__4
+#: model_terms:ir.ui.view,arch_db:project_risk.project_risk_form_view
+msgid "Low"
+msgstr "Nizka"
+
+#. module: project_risk
+#: model:ir.model.fields.selection,name:project_risk.selection__project_risk__rating__5
+#: model_terms:ir.ui.view,arch_db:project_risk.project_risk_form_view
+msgid "Low-Medium"
+msgstr "Nizko-srednje"
+
+#. module: project_risk
+#: model:ir.model.fields,field_description:project_risk.field_project_risk__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Glavna priponka"
+
+#. module: project_risk
+#: model:ir.model.fields.selection,name:project_risk.selection__project_risk__proximity__3
+#: model:ir.model.fields.selection,name:project_risk.selection__project_risk__rating__6
+#: model_terms:ir.ui.view,arch_db:project_risk.project_risk_form_view
+msgid "Medium"
+msgstr "Srednje"
+
+#. module: project_risk
+#: model:ir.model.fields.selection,name:project_risk.selection__project_risk__rating__7
+#: model_terms:ir.ui.view,arch_db:project_risk.project_risk_form_view
+msgid "Medium-High"
+msgstr "Srednje-visoko"
+
+#. module: project_risk
+#: model:ir.model.fields,field_description:project_risk.field_project_risk__message_has_error
+msgid "Message Delivery error"
+msgstr "Napaka ob dostavi sporočila"
+
+#. module: project_risk
+#: model:ir.model.fields,field_description:project_risk.field_project_risk__message_ids
+msgid "Messages"
+msgstr "Sporočila"
+
+#. module: project_risk
+#: model:ir.model.fields.selection,name:project_risk.selection__project_risk__impact__2
+msgid "Minor"
+msgstr "Majhno"
+
+#. module: project_risk
+#: model:ir.model.fields.selection,name:project_risk.selection__project_risk__impact__3
+msgid "Moderate"
+msgstr "Zmerno"
+
+#. module: project_risk
+#: model:ir.model.fields.selection,name:project_risk.selection__project_risk__rating__1
+msgid "N/A"
+msgstr "N/A"
+
+#. module: project_risk
+#: model:ir.model.fields,field_description:project_risk.field_project_risk__name
+#: model:ir.model.fields,field_description:project_risk.field_project_risk_category__name
+#: model:ir.model.fields,field_description:project_risk.field_project_risk_response_category__name
+msgid "Name"
+msgstr "Naziv"
+
+#. module: project_risk
+#: model:ir.model.fields,field_description:project_risk.field_project_risk__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Število ukrepov"
+
+#. module: project_risk
+#: model:ir.model.fields,field_description:project_risk.field_project_risk__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: project_risk
+#: model:ir.model.fields,help:project_risk.field_project_risk__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Število sporočil, kjer je potrebno ukrepati"
+
+#. module: project_risk
+#: model:ir.model.fields,help:project_risk.field_project_risk__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Število sporočil z napako ob dostavi"
+
+#. module: project_risk
+#: model:ir.model.fields,help:project_risk.field_project_risk__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Število neprebranih sporočil"
+
+#. module: project_risk
+#: model:ir.model.fields,field_description:project_risk.field_project_risk__owner_id
+msgid "Owner"
+msgstr "Lastnik"
+
+#. module: project_risk
+#: model:ir.model.fields.selection,name:project_risk.selection__project_risk__probability__3
+msgid "Possible"
+msgstr "Mogoče"
+
+#. module: project_risk
+#: model:ir.model.fields,field_description:project_risk.field_project_risk__probability
+msgid "Probability"
+msgstr "Verjetnost"
+
+#. module: project_risk
+#: model:ir.model,name:project_risk.model_project_project
+#: model:ir.model.fields,field_description:project_risk.field_project_risk__project_id
+#: model_terms:ir.ui.view,arch_db:project_risk.project_risk_search_view
+msgid "Project"
+msgstr "Projekt"
+
+#. module: project_risk
+#: model:ir.model,name:project_risk.model_project_risk
+#: model:ir.model.fields,field_description:project_risk.field_project_project__project_risk_ids
+#: model:ir.model.fields,field_description:project_risk.field_project_risk_response__project_risk_id
+msgid "Project Risk"
+msgstr "Projektno tveganje"
+
+#. module: project_risk
+#: model:ir.model.fields,field_description:project_risk.field_project_project__project_risk_count
+msgid "Project Risk Count"
+msgstr "Število proj. tveganj"
+
+#. module: project_risk
+#: model:ir.model,name:project_risk.model_project_risk_category
+msgid "Project Risks Categories"
+msgstr "Kategorije proj. tveganj"
+
+#. module: project_risk
+#: model:ir.model,name:project_risk.model_project_risk_response
+msgid "Project Risks Responses"
+msgstr "Odzivi na proj. tveganja"
+
+#. module: project_risk
+#: model:ir.model,name:project_risk.model_project_risk_response_category
+msgid "Project Risks Responses Categories"
+msgstr "Kategorije odzivov na proj. tveganja"
+
+#. module: project_risk
+#: model:ir.model.fields,field_description:project_risk.field_project_risk__proximity
+msgid "Proximity"
+msgstr "Bližina"
+
+#. module: project_risk
+#: model:ir.model.fields.selection,name:project_risk.selection__project_risk__probability__1
+msgid "Rare"
+msgstr "Redko"
+
+#. module: project_risk
+#: model:ir.model.fields,field_description:project_risk.field_project_risk__rating
+msgid "Rating"
+msgstr "Ocena"
+
+#. module: project_risk
+#: model:ir.model.fields,field_description:project_risk.field_project_risk__project_risk_response_ids
+#: model_terms:ir.ui.view,arch_db:project_risk.project_risk_form_view
+msgid "Response"
+msgstr "Odziv"
+
+#. module: project_risk
+#: model:ir.model.fields,field_description:project_risk.field_project_risk__project_risk_response_category_id
+msgid "Response Category"
+msgstr "Kategorija odziva"
+
+#. module: project_risk
+#: model:ir.actions.act_window,name:project_risk.project_risk_category_action
+#: model:ir.ui.menu,name:project_risk.project_risk_category_menu
+msgid "Risk Categories"
+msgstr "Kategorije tveganj"
+
+#. module: project_risk
+#: model:ir.actions.act_window,name:project_risk.project_risk_response_category_action
+#: model:ir.ui.menu,name:project_risk.project_risk_response_category_menu
+msgid "Risk Response Categories"
+msgstr "Kategorije odzivov na tveganje"
+
+#. module: project_risk
+#: model:ir.actions.act_window,name:project_risk.project_risk_action
+#: model:ir.ui.menu,name:project_risk.project_risk_menu
+#: model_terms:ir.ui.view,arch_db:project_risk.edit_project
+#: model_terms:ir.ui.view,arch_db:project_risk.project_completion_kanban
+msgid "Risks"
+msgstr "Tveganja"
+
+#. module: project_risk
+#: model:ir.model.fields,field_description:project_risk.field_project_risk__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: project_risk
+#: model:ir.model.fields,field_description:project_risk.field_project_risk_response__sequence
+msgid "Sequence"
+msgstr "Zaporedje"
+
+#. module: project_risk
+#: model:ir.model.fields.selection,name:project_risk.selection__project_risk__impact__4
+msgid "Significant"
+msgstr "Znatno"
+
+#. module: project_risk
+#: model:ir.model.fields,field_description:project_risk.field_project_risk__state
+msgid "State"
+msgstr "Stanje"
+
+#. module: project_risk
+#: model:ir.model.fields.selection,name:project_risk.selection__project_risk__impact__1
+#: model:ir.model.fields.selection,name:project_risk.selection__project_risk__rating__2
+#: model_terms:ir.ui.view,arch_db:project_risk.project_risk_form_view
+msgid "Trivial"
+msgstr "Trivialno"
+
+#. module: project_risk
+#: model:ir.model.fields.selection,name:project_risk.selection__project_risk__probability__2
+msgid "Unlikely"
+msgstr "Malo verjetno"
+
+#. module: project_risk
+#: model:ir.model.fields,field_description:project_risk.field_project_risk__message_unread
+msgid "Unread Messages"
+msgstr "Neprebrana sporočila"
+
+#. module: project_risk
+#: model:ir.model.fields,field_description:project_risk.field_project_risk__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Št. neprebranih sporočil"
+
+#. module: project_risk
+#: model:ir.model.fields.selection,name:project_risk.selection__project_risk__proximity__5
+#: model:ir.model.fields.selection,name:project_risk.selection__project_risk__rating__9
+#: model_terms:ir.ui.view,arch_db:project_risk.project_risk_form_view
+msgid "Very High"
+msgstr "Zelo visoka"
+
+#. module: project_risk
+#: model:ir.model.fields.selection,name:project_risk.selection__project_risk__rating__3
+#: model_terms:ir.ui.view,arch_db:project_risk.project_risk_form_view
+msgid "Very Low"
+msgstr "Zelo nizko"
+
+#. module: project_risk
+#: model:ir.model.fields.selection,name:project_risk.selection__project_risk__probability__5
+msgid "Very likely"
+msgstr "Precej verjetno"
+
+#. module: project_risk
+#: model:ir.model.fields.selection,name:project_risk.selection__project_risk__proximity__1
+msgid "Very low"
+msgstr "Zelo nizko"
+
+#. module: project_risk
+#: model:ir.model.fields,field_description:project_risk.field_project_risk__website_message_ids
+msgid "Website Messages"
+msgstr "Sporočila spletne strani"
+
+#. module: project_risk
+#: model:ir.model.fields,help:project_risk.field_project_risk__website_message_ids
+msgid "Website communication history"
+msgstr "Kronologija komunikacij spletne strani"
+
+#~ msgid "If checked new messages require your attention."
+#~ msgstr "Če označeno pomeni, da nova sporočila zahtevajo vašo pozornost."
+
+#~ msgid "Number of error"
+#~ msgstr "Število napak"
+
+#~ msgid "WBS element"
+#~ msgstr "Projektni člen"

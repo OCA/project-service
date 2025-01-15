@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2019 Onestein
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <!-- Risk -->
+    <record id="project_risk_user_access" model="ir.model.access">
+        <field name="name">project_risk_user_access</field>
+        <field name="model_id" ref="model_project_risk" />
+        <field name="group_id" ref="project.group_project_user" />
+        <field name="perm_read" eval="1" />
+        <field name="perm_create" eval="0" />
+        <field name="perm_write" eval="0" />
+        <field name="perm_unlink" eval="0" />
+    </record>
+    <record id="project_risk_manager_access" model="ir.model.access">
+        <field name="name">project_risk_manager_access</field>
+        <field name="model_id" ref="model_project_risk" />
+        <field name="group_id" ref="project.group_project_manager" />
+        <field name="perm_read" eval="1" />
+        <field name="perm_create" eval="1" />
+        <field name="perm_write" eval="1" />
+        <field name="perm_unlink" eval="1" />
+    </record>
+    <!-- Risk Category -->
+    <record id="project_risk_category_user_access" model="ir.model.access">
+        <field name="name">project_risk_category_user_access</field>
+        <field name="model_id" ref="model_project_risk_category" />
+        <field name="group_id" ref="project.group_project_user" />
+        <field name="perm_read" eval="1" />
+        <field name="perm_create" eval="0" />
+        <field name="perm_write" eval="0" />
+        <field name="perm_unlink" eval="0" />
+    </record>
+    <record id="project_risk_category_manager_access" model="ir.model.access">
+        <field name="name">project_risk_category_manager_access</field>
+        <field name="model_id" ref="model_project_risk_category" />
+        <field name="group_id" ref="project.group_project_manager" />
+        <field name="perm_read" eval="1" />
+        <field name="perm_create" eval="1" />
+        <field name="perm_write" eval="1" />
+        <field name="perm_unlink" eval="1" />
+    </record>
+    <!-- Risk Response -->
+    <record id="project_risk_response_user_access" model="ir.model.access">
+        <field name="name">project_risk_response_user_access</field>
+        <field name="model_id" ref="model_project_risk_response" />
+        <field name="group_id" ref="project.group_project_user" />
+        <field name="perm_read" eval="1" />
+        <field name="perm_create" eval="0" />
+        <field name="perm_write" eval="0" />
+        <field name="perm_unlink" eval="0" />
+    </record>
+    <record id="project_risk_response_manager_access" model="ir.model.access">
+        <field name="name">project_risk_response_manager_access</field>
+        <field name="model_id" ref="model_project_risk_response" />
+        <field name="group_id" ref="project.group_project_manager" />
+        <field name="perm_read" eval="1" />
+        <field name="perm_create" eval="1" />
+        <field name="perm_write" eval="1" />
+        <field name="perm_unlink" eval="1" />
+    </record>
+    <!-- Risk Response Category -->
+    <record id="project_risk_response_category_user_access" model="ir.model.access">
+        <field name="name">project_risk_response_category_user_access</field>
+        <field name="model_id" ref="model_project_risk_response_category" />
+        <field name="group_id" ref="project.group_project_user" />
+        <field name="perm_read" eval="1" />
+        <field name="perm_create" eval="0" />
+        <field name="perm_write" eval="0" />
+        <field name="perm_unlink" eval="0" />
+    </record>
+    <record id="project_risk_response_category_manager_access" model="ir.model.access">
+        <field name="name">project_risk_response_category_manager_access</field>
+        <field name="model_id" ref="model_project_risk_response_category" />
+        <field name="group_id" ref="project.group_project_manager" />
+        <field name="perm_read" eval="1" />
+        <field name="perm_create" eval="1" />
+        <field name="perm_write" eval="1" />
+        <field name="perm_unlink" eval="1" />
+    </record>
+</odoo>

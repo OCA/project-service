@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2019 Onestein
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <menuitem
+        id="project_risk_menu"
+        parent="project.menu_main_pm"
+        sequence="3"
+        action="project_risk_action"
+    />
+    <menuitem
+        id="project_risk_category_menu"
+        parent="project.menu_project_config"
+        action="project_risk_category_action"
+    />
+    <menuitem
+        id="project_risk_response_category_menu"
+        parent="project.menu_project_config"
+        action="project_risk_response_category_action"
+    />
+</odoo>

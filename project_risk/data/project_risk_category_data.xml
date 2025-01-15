@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2019 Onestein
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo noupdate="1">
+    <record id="project_risk_category_quality" model="project.risk.category">
+        <field name="name">Quality</field>
+    </record>
+    <record id="project_risk_category_network" model="project.risk.category">
+        <field name="name">Network</field>
+    </record>
+    <record id="project_risk_category_legal" model="project.risk.category">
+        <field name="name">Legal</field>
+    </record>
+    <record id="project_risk_category_supplier" model="project.risk.category">
+        <field name="name">Supplier</field>
+    </record>
+</odoo>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2019 Onestein
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="project_risk_form_view" model="ir.ui.view">
+        <field name="model">project.risk</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field
+                        name="state"
+                        widget="statusbar"
+                        statusbar_visible="draft,active,closed"
+                        options="{'clickable': '1'}"
+                    />
+                </header>
+                <sheet>
+                    <widget
+                        name="web_ribbon"
+                        title="Draft"
+                        bg_color="bg-primary"
+                        attrs="{'invisible': [('state', '!=', 'draft')]}"
+                    />
+                    <widget
+                        name="web_ribbon"
+                        title="Trivial"
+                        bg_color="bg-info"
+                        attrs="{'invisible': ['|', ('state', '!=', 'active'),('rating', '!=', '2')]}"
+                    />
+                    <widget
+                        name="web_ribbon"
+                        title="Very Low"
+                        bg_color="bg-success"
+                        attrs="{'invisible': ['|', ('state', '!=', 'active'),('rating', '!=', '3')]}"
+                    />
+                    <widget
+                        name="web_ribbon"
+                        title="Low"
+                        bg_color="bg-success"
+                        attrs="{'invisible': ['|', ('state', '!=', 'active'),('rating', '!=', '4')]}"
+                    />
+                    <widget
+                        name="web_ribbon"
+                        title="Low-Medium"
+                        bg_color="bg-warning"
+                        attrs="{'invisible': ['|', ('state', '!=', 'active'),('rating', '!=', '5')]}"
+                    />
+                    <widget
+                        name="web_ribbon"
+                        title="Medium"
+                        bg_color="bg-warning"
+                        attrs="{'invisible': ['|', ('state', '!=', 'active'),('rating', '!=', '6')]}"
+                    />
+                    <widget
+                        name="web_ribbon"
+                        title="Medium-High"
+                        bg_color="bg-warning"
+                        attrs="{'invisible': ['|', ('state', '!=', 'active'),('rating', '!=', '7')]}"
+                    />
+                    <widget
+                        name="web_ribbon"
+                        title="High"
+                        bg_color="bg-danger"
+                        attrs="{'invisible': ['|', ('state', '!=', 'active'),('rating', '!=', '8')]}"
+                    />
+                    <widget
+                        name="web_ribbon"
+                        title="Very High"
+                        bg_color="bg-danger"
+                        attrs="{'invisible': ['|', ('state', '!=', 'active'),('rating', '!=', '9')]}"
+                    />
+                    <widget
+                        name="web_ribbon"
+                        title="Critical"
+                        bg_color="bg-danger"
+                        attrs="{'invisible': ['|', ('state', '!=', 'active'),('rating', '!=', '10')]}"
+                    />
+                    <widget
+                        name="web_ribbon"
+                        title="Closed"
+                        bg_color="bg-primary"
+                        attrs="{'invisible': [('state', '!=', 'closed')]}"
+                    />
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only" />
+                        <h1>
+                            <field name="name" />
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="project_id" />
+                            <field name="project_risk_category_id" widget="selection" />
+                            <field name="owner_id" />
+                            <field name="actionee_id" />
+                        </group>
+                        <group>
+                            <field name="probability" />
+                            <field name="impact" />
+                            <field name="rating" />
+                            <field name="proximity" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Description">
+                            <field name="description" />
+                        </page>
+                        <page string="Response">
+                            <group>
+                                <field
+                                    name="project_risk_response_category_id"
+                                    widget="selection"
+                                />
+                            </group>
+                            <field name="project_risk_response_ids">
+                                <tree editable="bottom">
+                                    <field name="sequence" widget="handle" />
+                                    <field name="description" />
+                                </tree>
+                                <form>
+                                    <group>
+                                        <field name="sequence" />
+                                        <field name="description" />
+                                    </group>
+                                </form>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" />
+                    <field name="message_ids" widget="mail_thread" />
+                </div>
+            </form>
+        </field>
+    </record>
+    <record id="project_risk_tree_view" model="ir.ui.view">
+        <field name="model">project.risk</field>
+        <field name="arch" type="xml">
+            <tree
+                default_order="rating desc,proximity desc"
+                decoration-danger="rating > 7"
+                decoration-muted="state == 'draft'"
+            >
+                <field name="project_id" />
+                <field name="name" />
+                <field name="rating" />
+                <field name="proximity" />
+                <field name="state" />
+            </tree>
+        </field>
+    </record>
+    <record id="project_risk_search_view" model="ir.ui.view">
+        <field name="model">project.risk</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="project_id" />
+                <field name="name" />
+                <field name="rating" />
+                <field name="proximity" />
+                <filter
+                    name="active"
+                    string="Active"
+                    domain="[('state', '=', 'active')]"
+                />
+                <group expand="0" string="Group By...">
+                    <filter
+                        name="group_by_project_id"
+                        string="Project"
+                        context="{'group_by':'project_id'}"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+    <record id="project_risk_action" model="ir.actions.act_window">
+        <field name="name">Risks</field>
+        <field name="res_model">project.risk</field>
+    </record>
+</odoo>

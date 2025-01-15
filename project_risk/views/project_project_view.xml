@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2019 Onestein
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="edit_project" model="ir.ui.view">
+        <field name="name">edit.project</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('oe_button_box')]" position="inside">
+                <button
+                    class="oe_stat_button"
+                    type="object"
+                    name="view_risk"
+                    icon="fa-exclamation-circle"
+                >
+                    <field string="Risks" name="project_risk_count" widget="statinfo" />
+                </button>
+            </xpath>
+        </field>
+    </record>
+    <record id="project_completion_kanban" model="ir.ui.view">
+        <field name="name">project.completion.kanban</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.view_project_kanban" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//div[hasclass('o_kanban_card_manage_section')]"
+                position="inside"
+            >
+                <div>
+                    <a name="view_risk" type="object">Risks</a>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>
