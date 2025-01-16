@@ -1,0 +1,44 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* project_analytic_code
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: project_analytic_code
+#: model_terms:ir.ui.view,arch_db:project_analytic_code.view_project_project_filter
+msgid "Analytic account"
+msgstr ""
+
+#. module: project_analytic_code
+#: model:ir.model.fields,field_description:project_analytic_code.field_project_project__analytic_account_code
+msgid "Analytic code"
+msgstr ""
+
+#. module: project_analytic_code
+#: model:ir.model.fields,field_description:project_analytic_code.field_project_project__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: project_analytic_code
+#: model:ir.model.fields,field_description:project_analytic_code.field_project_project__id
+msgid "ID"
+msgstr ""
+
+#. module: project_analytic_code
+#: model:ir.model.fields,field_description:project_analytic_code.field_project_project____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: project_analytic_code
+#: model:ir.model,name:project_analytic_code.model_project_project
+msgid "Project"
+msgstr ""

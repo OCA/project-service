@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="view_project_project_filter" model="ir.ui.view">
+            <field name="inherit_id" ref="project.view_project_project_filter" />
+            <field name="name">project_analytic_code.project.select</field>
+            <field name="model">project.project</field>
+            <field name="arch" type="xml">
+                <field name="name" position="attributes">
+                    <attribute
+                        name="filter_domain"
+                    >["|", ("name", "ilike", self), ("analytic_account_code", "=", self)]</attribute>
+                </field>
+                <xpath expr="//group" position="inside">
+                    <filter
+                        string="Analytic account"
+                        name="Analytic account"
+                        context="{'group_by': 'analytic_account_id'}"
+                    />
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_project_kanban">
+            <field name="inherit_id" ref="project.view_project_kanban" />
+            <field name="name">project.project.kanban.project_analytic_code</field>
+            <field name="model">project.project</field>
+            <field name="priority">200</field>
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                    <field name="analytic_account_code" />
+                </field>
+                <xpath expr="//t[@t-esc='record.name.value']" position="before">
+                    <strong t-if="record.analytic_account_code.value">
+                        [<t t-esc="record.analytic_account_code.value" />]
+                    </strong>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
