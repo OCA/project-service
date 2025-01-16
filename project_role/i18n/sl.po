@@ -1,0 +1,502 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* project_role
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2023-04-12 13:35+0000\n"
+"Last-Translator: Matjaz Mozetic <matjaz@luxim.si>\n"
+"Language-Team: none\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
+"%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 4.14.1\n"
+
+#. module: project_role
+#. odoo-python
+#: code:addons/project_role/models/project_assignment.py:0
+#, python-format
+msgid "%(USER)s as %(ROLE)s"
+msgstr ""
+
+#. module: project_role
+#. odoo-python
+#: code:addons/project_role/models/project_assignment.py:0
+#, python-format
+msgid "%(USER)s as %(ROLE)s in %(PROJECT)s"
+msgstr ""
+
+#. module: project_role
+#. odoo-python
+#: code:addons/project_role/models/project_assignment.py:0
+#, python-format
+msgid "%(USER)s as %(ROLE)s on %(PROJECT)s"
+msgstr ""
+
+#. module: project_role
+#. odoo-python
+#: code:addons/project_role/models/project_role.py:0
+#, python-format
+msgid "%(parent)s / %(own)s"
+msgstr "%(parent)s / %(own)s"
+
+#. module: project_role
+#: model_terms:ir.ui.view,arch_db:project_role.res_config_settings_view_form
+msgid ""
+"<span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-"
+"specific.\" role=\"img\" aria-label=\"Values set here are company-specific."
+"\" groups=\"base.group_multi_company\"/>"
+msgstr ""
+"<span class=\"fa fa-lg fa-building-o\" title=\"Tukajšnje vrednosti so "
+"specifične za posamezno družbo.\" role=\"img\" aria-label=\"Tukajšnje "
+"vrednosti so specifične za posamezno družbo.\" groups=\"base."
+"group_multi_company\"/>"
+
+#. module: project_role
+#: model_terms:ir.ui.view,arch_db:project_role.res_config_settings_view_form
+msgid ""
+"<span class=\"o_form_label\">Project Roles</span>\n"
+"                                <span class=\"fa fa-lg fa-building-o\" title="
+"\"Values set here are company-specific.\" role=\"img\" aria-label=\"Values "
+"set here are company-specific.\" groups=\"base.group_multi_company\"/>"
+msgstr ""
+"<span class=\"o_form_label\">Projektne vloge</span>\n"
+"                                <span class=\"fa fa-lg fa-building-o\" title="
+"\"Vrednosti za posamezno družbo.\" role=\"img\" aria-label=\"Vrednosti za "
+"posamezno družbo.\" groups=\"base.group_multi_company\"/>"
+
+#. module: project_role
+#: model:ir.model.fields,field_description:project_role.field_project_assignment__message_needaction
+msgid "Action Needed"
+msgstr "Potrebno ukrepanje"
+
+#. module: project_role
+#: model:ir.model.fields,field_description:project_role.field_project_assignment__active
+#: model:ir.model.fields,field_description:project_role.field_project_role__active
+msgid "Active"
+msgstr "Aktivno"
+
+#. module: project_role
+#: model_terms:ir.ui.view,arch_db:project_role.project_assignment_form
+#: model_terms:ir.ui.view,arch_db:project_role.project_assignment_search
+#: model_terms:ir.ui.view,arch_db:project_role.project_role_search
+#: model_terms:ir.ui.view,arch_db:project_role.project_role_view_form
+msgid "Archived"
+msgstr "Arhivirano"
+
+#. module: project_role
+#. odoo-python
+#: code:addons/project_role/models/project_assignment.py:0
+#, python-format
+msgid ""
+"Assignment %(ASSIGNMENT)s conflicts with another assignment: "
+"%(OTHER_ASSIGNMENT)s"
+msgstr ""
+
+#. module: project_role
+#: model:ir.actions.act_window,name:project_role.project_assignment_view_project_action
+#: model:ir.ui.menu,name:project_role.menu_project_assignments
+#: model_terms:ir.ui.view,arch_db:project_role.edit_project
+msgid "Assignments"
+msgstr "Zadolžitve"
+
+#. module: project_role
+#: model:ir.model.fields,field_description:project_role.field_project_assignment__message_attachment_count
+msgid "Attachment Count"
+msgstr "Št. priponk"
+
+#. module: project_role
+#: model_terms:ir.ui.view,arch_db:project_role.res_config_settings_view_form
+msgid "Check to configure projects to inherit company assignments by default."
+msgstr "Označite, da bi projekti privzeto dedovali zadolžitve družbe."
+
+#. module: project_role
+#: model_terms:ir.ui.view,arch_db:project_role.res_config_settings_view_form
+msgid "Check to configure projects to limit role to assignments by default."
+msgstr "Označite, da bi privzeto omejili projektno vlogo na zadolžitve."
+
+#. module: project_role
+#: model:ir.model.fields,field_description:project_role.field_project_role__child_ids
+msgid "Child Roles"
+msgstr "Podrejene vloge"
+
+#. module: project_role
+#: model:ir.model,name:project_role.model_res_company
+msgid "Companies"
+msgstr "Družbe"
+
+#. module: project_role
+#: model:ir.model.fields,field_description:project_role.field_project_assignment__company_id
+#: model:ir.model.fields,field_description:project_role.field_project_role__company_id
+#: model_terms:ir.ui.view,arch_db:project_role.project_assignment_search
+msgid "Company"
+msgstr "Družba"
+
+#. module: project_role
+#: model_terms:ir.ui.view,arch_db:project_role.project_assignment_search
+msgid "Company-Wide"
+msgstr "V sklopu družbe"
+
+#. module: project_role
+#: model:ir.model.fields,field_description:project_role.field_project_role__complete_name
+msgid "Complete Name"
+msgstr "Poln naziv"
+
+#. module: project_role
+#: model:ir.model,name:project_role.model_res_config_settings
+msgid "Config Settings"
+msgstr "Nastavitve"
+
+#. module: project_role
+#: model_terms:ir.ui.view,arch_db:project_role.res_config_settings_view_form
+msgid "Configure set of roles, available on projects."
+msgstr "Nastavi sklop pravil na voljo pri projektih."
+
+#. module: project_role
+#: model:ir.model.fields,field_description:project_role.field_project_assignment__create_uid
+#: model:ir.model.fields,field_description:project_role.field_project_role__create_uid
+msgid "Created by"
+msgstr "Ustvaril"
+
+#. module: project_role
+#: model:ir.model.fields,field_description:project_role.field_project_assignment__create_date
+#: model:ir.model.fields,field_description:project_role.field_project_role__create_date
+msgid "Created on"
+msgstr "Ustvarjeno"
+
+#. module: project_role
+#: model:ir.model.fields,field_description:project_role.field_project_role__description
+msgid "Description"
+msgstr "Opis"
+
+#. module: project_role
+#: model:ir.model.fields,field_description:project_role.field_project_assignment__display_name
+#: model:ir.model.fields,field_description:project_role.field_project_role__display_name
+msgid "Display Name"
+msgstr "Prikazani naziv"
+
+#. module: project_role
+#: model:ir.model.fields,field_description:project_role.field_project_assignment__message_follower_ids
+msgid "Followers"
+msgstr "Sledilci"
+
+#. module: project_role
+#: model:ir.model.fields,field_description:project_role.field_project_assignment__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Sledilci (partnerji)"
+
+#. module: project_role
+#: model_terms:ir.ui.view,arch_db:project_role.project_assignment_search
+msgid "Group By"
+msgstr "Združi po"
+
+#. module: project_role
+#: model:ir.model.fields,field_description:project_role.field_project_assignment__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: project_role
+#: model:ir.model.fields,field_description:project_role.field_project_assignment__id
+#: model:ir.model.fields,field_description:project_role.field_project_role__id
+msgid "ID"
+msgstr "ID"
+
+#. module: project_role
+#: model:ir.model.fields,help:project_role.field_project_assignment__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Če označeno pomeni, da nova sporočila zahtevajo vašo pozornost."
+
+#. module: project_role
+#: model:ir.model.fields,help:project_role.field_project_assignment__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+"Če označeno pomeni, da je pri nekaterih sporočilih prišlo do napake pri "
+"dostavi."
+
+#. module: project_role
+#: model:ir.model.fields,field_description:project_role.field_project_project__inherit_assignments
+msgid "Inherit Assignments"
+msgstr ""
+
+#. module: project_role
+#: model:ir.model.fields,field_description:project_role.field_project_assignment__message_is_follower
+msgid "Is Follower"
+msgstr "Je sledilec"
+
+#. module: project_role
+#: model:ir.model.fields,field_description:project_role.field_project_assignment____last_update
+#: model:ir.model.fields,field_description:project_role.field_project_role____last_update
+msgid "Last Modified on"
+msgstr "Zadnjič spremenjeno"
+
+#. module: project_role
+#: model:ir.model.fields,field_description:project_role.field_project_assignment__write_uid
+#: model:ir.model.fields,field_description:project_role.field_project_role__write_uid
+msgid "Last Updated by"
+msgstr "Zadnji posodobil"
+
+#. module: project_role
+#: model:ir.model.fields,field_description:project_role.field_project_assignment__write_date
+#: model:ir.model.fields,field_description:project_role.field_project_role__write_date
+msgid "Last Updated on"
+msgstr "Zadnjič posodobljeno"
+
+#. module: project_role
+#: model:ir.model.fields,field_description:project_role.field_res_company__project_limit_role_to_assignments
+#: model:ir.model.fields,field_description:project_role.field_res_config_settings__project_limit_role_to_assignments
+#: model_terms:ir.ui.view,arch_db:project_role.res_config_settings_view_form
+msgid "Limit Project Role to Assignments"
+msgstr "Omeji projektne vloge na zadolžitve"
+
+#. module: project_role
+#: model:ir.model.fields,field_description:project_role.field_project_project__limit_role_to_assignments
+msgid "Limit Role To Assignments"
+msgstr ""
+
+#. module: project_role
+#: model:ir.model.fields,field_description:project_role.field_project_assignment__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Glavna priponka"
+
+#. module: project_role
+#: model:ir.model.fields,field_description:project_role.field_project_assignment__message_has_error
+msgid "Message Delivery error"
+msgstr "Napaka ob dostavi sporočila"
+
+#. module: project_role
+#: model:ir.model.fields,field_description:project_role.field_project_assignment__message_ids
+msgid "Messages"
+msgstr "Sporočila"
+
+#. module: project_role
+#: model_terms:ir.ui.view,arch_db:project_role.project_assignment_search
+msgid "My Assignments"
+msgstr "Moje zadolžitve"
+
+#. module: project_role
+#: model:ir.model.fields,field_description:project_role.field_project_assignment__name
+#: model:ir.model.fields,field_description:project_role.field_project_role__name
+msgid "Name"
+msgstr "Naziv"
+
+#. module: project_role
+#: model:ir.model.fields,field_description:project_role.field_project_assignment__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Število ukrepov"
+
+#. module: project_role
+#: model:ir.model.fields,field_description:project_role.field_project_assignment__message_has_error_counter
+#, fuzzy
+msgid "Number of errors"
+msgstr "Število napak"
+
+#. module: project_role
+#: model:ir.model.fields,help:project_role.field_project_assignment__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr ""
+
+#. module: project_role
+#: model:ir.model.fields,help:project_role.field_project_assignment__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Število sporočil z napako ob dostavi"
+
+#. module: project_role
+#: model:ir.model.fields,field_description:project_role.field_project_role__parent_path
+msgid "Parent Path"
+msgstr "Nadrejena pot"
+
+#. module: project_role
+#: model:ir.model.fields,field_description:project_role.field_project_role__parent_id
+msgid "Parent Role"
+msgstr "Nadrejena vloga"
+
+#. module: project_role
+#. odoo-python
+#: code:addons/project_role/models/project_role.py:0
+#, python-format
+msgid "Please activate first parent role %s"
+msgstr "Najprej aktivirajte nadrejeno vlogo %s"
+
+#. module: project_role
+#: model:ir.model,name:project_role.model_project_project
+#: model:ir.model.fields,field_description:project_role.field_project_assignment__project_id
+#: model_terms:ir.ui.view,arch_db:project_role.project_assignment_search
+msgid "Project"
+msgstr "Projekt"
+
+#. module: project_role
+#: model:ir.model,name:project_role.model_project_assignment
+msgid "Project Assignment"
+msgstr "Projektna zadolžitev"
+
+#. module: project_role
+#: model:ir.actions.act_window,name:project_role.project_assignment_view_all_action
+#: model:ir.model.fields,field_description:project_role.field_project_project__assignment_ids
+msgid "Project Assignments"
+msgstr "Projektne zadolžitve"
+
+#. module: project_role
+#: model:ir.model,name:project_role.model_project_role
+msgid "Project Role"
+msgstr "Projektna vloga"
+
+#. module: project_role
+#: model:ir.actions.act_window,name:project_role.company_project_roles_action
+#: model:ir.ui.menu,name:project_role.project_menu_config_roles
+msgid "Project Roles"
+msgstr "Projektne vloge"
+
+#. module: project_role
+#: model:ir.model.fields,field_description:project_role.field_res_company__project_inherit_assignments
+#: model:ir.model.fields,field_description:project_role.field_res_config_settings__project_inherit_assignments
+msgid "Projects Inherit Assignments"
+msgstr "Projekti dedujejo zadolžitve"
+
+#. module: project_role
+#: model_terms:ir.ui.view,arch_db:project_role.res_config_settings_view_form
+msgid "Projects inherit Company assignments"
+msgstr "Projekti dedujejo zadolžitve iz družbe"
+
+#. module: project_role
+#: model:ir.model.fields,field_description:project_role.field_project_assignment__role_id
+#: model_terms:ir.ui.view,arch_db:project_role.project_assignment_search
+msgid "Role"
+msgstr "Vloga"
+
+#. module: project_role
+#. odoo-python
+#: code:addons/project_role/models/project_role.py:0
+#, python-format
+msgid "Role \"%s\" conflicts with another role due to same name."
+msgstr "Vloga \"%s\" je v konfliktu z drugo vlogo z istim nazivom."
+
+#. module: project_role
+#: model:ir.model.constraint,message:project_role.constraint_project_role_name_company_uniq
+msgid "Role with such name already exists in the company!"
+msgstr "Vloga s takim nazivom že obstaja v sklopu družbe!"
+
+#. module: project_role
+#: model_terms:ir.ui.view,arch_db:project_role.res_config_settings_view_form
+msgid "Roles &amp; Assignments"
+msgstr "Vloge in zadolžitve"
+
+#. module: project_role
+#: model_terms:ir.ui.view,arch_db:project_role.res_config_settings_view_form
+msgid "Setup project roles"
+msgstr "Nastavi projektne vloge"
+
+#. module: project_role
+#: model:ir.model.constraint,message:project_role.constraint_project_role_name_nocompany_uniq
+msgid "Shared role with such name already exists!"
+msgstr "Vloga v souporabi s takim nazivom že obstaja!"
+
+#. module: project_role
+#: model:ir.model.fields,field_description:project_role.field_project_assignment__user_id
+#: model_terms:ir.ui.view,arch_db:project_role.project_assignment_search
+msgid "User"
+msgstr "Uporabnik"
+
+#. module: project_role
+#. odoo-python
+#: code:addons/project_role/models/project_assignment.py:0
+#, python-format
+msgid "User %(USER)s can not be assigned to role %(ROLE)s on %(PROJECT)s."
+msgstr ""
+
+#. module: project_role
+#. odoo-python
+#: code:addons/project_role/models/project_assignment.py:0
+#, python-format
+msgid "User %(USER)s can not be assigned to role %(ROLE)s."
+msgstr ""
+
+#. module: project_role
+#: model:ir.model.constraint,message:project_role.constraint_project_assignment_company_role_user_uniq
+msgid "User may be assigned per role only once within a company!"
+msgstr "Uporabniku se lahko dodeli določena vloga le enkrat v sklopu družbe!"
+
+#. module: project_role
+#: model:ir.model.constraint,message:project_role.constraint_project_assignment_project_role_user_uniq
+msgid "User may be assigned per role only once within a project!"
+msgstr "Uporabniku se lahko dodeli določena vloga le enkrat v sklopu projekta!"
+
+#. module: project_role
+#: model:ir.model.constraint,message:project_role.constraint_project_assignment_nocompany_role_user_uniq
+msgid "User may be assigned per role only once!"
+msgstr "Uporabniku se lahko dodeli določeno vlogo le enkrat!"
+
+#. module: project_role
+#: model:ir.model.fields,field_description:project_role.field_project_assignment__website_message_ids
+msgid "Website Messages"
+msgstr "Sporočila spletne strani"
+
+#. module: project_role
+#: model:ir.model.fields,help:project_role.field_project_assignment__website_message_ids
+msgid "Website communication history"
+msgstr "Kronologija komunikacij spletne strani"
+
+#, fuzzy
+#~ msgid "SMS Delivery error"
+#~ msgstr "Napaka ob dostavi sporočila"
+
+#~ msgid "Number of messages which requires an action"
+#~ msgstr "Število sporočil, kjer je potrebno ukrepati"
+
+#, python-format
+#~ msgid "%s as %s"
+#~ msgstr "%s kot %s"
+
+#, python-format
+#~ msgid "%s as %s in %s"
+#~ msgstr "%s kot %s v %s"
+
+#, python-format
+#~ msgid "%s as %s on %s"
+#~ msgstr "%s kot %s na %s"
+
+#, python-format
+#~ msgid "Assignment %s conflicts with another assignment: %s"
+#~ msgstr "Zadolžitev %s je v konfliktu z zadolžitvijo: %s"
+
+#~ msgid "Followers (Channels)"
+#~ msgstr "Sledilci (kanali)"
+
+#~ msgid "Inactive"
+#~ msgstr "Neaktivno"
+
+#~ msgid "Inherit assignments"
+#~ msgstr "Deduj zadolžitve"
+
+#~ msgid "Limit role to assignments"
+#~ msgstr "Omeji vlogo na zadolžitve"
+
+#~ msgid "Number of unread messages"
+#~ msgstr "Število neprebranih sporočil"
+
+#~ msgid "Unread Messages"
+#~ msgstr "Neprebrana sporočila"
+
+#~ msgid "Unread Messages Counter"
+#~ msgstr "Št. neprebranih sporočil"
+
+#, python-format
+#~ msgid "User %s can not be assigned to role %s on %s."
+#~ msgstr "Uporabniku %s ni mogoče dodeliti vloge %s na %s."
+
+#, python-format
+#~ msgid "User %s can not be assigned to role %s."
+#~ msgstr "Uporabniku %s ni mogoče dodeliti vloge %s."
+
+#~ msgid "If checked new messages require your attention."
+#~ msgstr "Če označeno pomeni, da nova sporočila zahtevajo vašo pozornost."
+
+#~ msgid "WBS element"
+#~ msgstr "Projektni člen"
+
+#~ msgid "You cannot create recursive roles."
+#~ msgstr "Rekurzivne vloge niso dovoljene."

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+    Copyright 2018-2019 Brainbean Apps (https://brainbeanapps.com)
+    License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+    <record id="edit_project" model="ir.ui.view">
+        <field name="name">project.project.form</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project" />
+        <field name="arch" type="xml">
+            <div name="button_box" position="inside">
+                <button
+                    class="oe_stat_button"
+                    name="%(project_assignment_view_project_action)d"
+                    type="action"
+                    icon="fa-users"
+                    string="Assignments"
+                />
+            </div>
+            <page name="settings">
+                <group name="roles" string="Assignments">
+                    <field name="inherit_assignments" />
+                    <field name="limit_role_to_assignments" />
+                </group>
+            </page>
+            <notebook position="inside">
+                <page name="assignments" string="Assignments">
+                    <field name="assignment_ids">
+                        <tree>
+                            <field name="role_id" />
+                            <field name="user_id" />
+                        </tree>
+                    </field>
+                </page>
+            </notebook>
+        </field>
+    </record>
+</odoo>
