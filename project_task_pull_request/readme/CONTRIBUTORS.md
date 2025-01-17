@@ -1,0 +1,9 @@
+- Kelly Lougheed \<<kelly@smdrugstore.com>\>
+- Ruchir Shukla \<<ruchir@bizzappdev.com>\>
+- [Tecnativa](https://www.tecnativa.com):
+  - Ernesto Tejeda
+  - Jairo Llopis
+- Cetmix \<<https://cetmix.com/>\>:
+  - Ivan Sokolov
+  - Vladimir Kalmykov
+- `Heliconia Solutions Pvt. Ltd. <https://www.heliconia.io>`_
