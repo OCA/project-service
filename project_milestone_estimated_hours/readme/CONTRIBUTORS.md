@@ -1,0 +1,4 @@
+- Majda El Mariouli majda.elmariouli@numigi.com (www.numigi.com)
+- Julie LeBrun julie.lebrun@numigi.com (www.numigi.com)
+- Quentin Lavallée Bourdeau quentin.lavallee@numigi.com (www.numigi.com)
+- Abdellatif Benzbiria abdellatif.benzbiria@numigi.com (www.numigi.com)

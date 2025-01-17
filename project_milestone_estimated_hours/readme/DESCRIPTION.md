@@ -1,0 +1,1 @@
+This module adds a new field `Estimated Hours` in the Form and List views of a **Project Milestone** and in the Tab of **Milestones** in a **Project** Form view.

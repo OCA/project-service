@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Form View -->
+    <record id="project_milestone_estimated_hours_view_form" model="ir.ui.view">
+        <field name="name">Project Milestone Estimated Hours Form</field>
+        <field name="model">project.project</field>
+        <field
+            name="inherit_id"
+            ref="project_milestone.project_enhancement_milestone_view_inherit_form"
+        />
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <xpath
+                expr="//page[@name='milestone_ids']/group/field[@name='milestone_ids']/tree/field[@name='project_task_ids']"
+                position="after"
+            >
+                <field name="estimated_hours" />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

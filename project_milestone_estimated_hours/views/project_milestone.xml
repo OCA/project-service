@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- List View-->
+    <record id="project_milestone_estimated_hours_view_list" model="ir.ui.view">
+        <field name="name">Project Milestone Estimated Hours List</field>
+        <field name="model">project.milestone</field>
+        <field name="inherit_id" ref="project_milestone.project_milestone_view_list" />
+        <field name="arch" type="xml">
+            <field name="project_task_ids" position="after">
+                <field name="estimated_hours" widget="float_time" />
+            </field>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="project_milestone_estimated_hours_form" model="ir.ui.view">
+        <field name="name">Project Milestone Estimated Hours Form</field>
+        <field name="model">project.milestone</field>
+        <field name="inherit_id" ref="project_milestone.project_milestone_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//group" position="before">
+                <group>
+                    <group>
+                        <field name="estimated_hours" widget="float_time" />
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
