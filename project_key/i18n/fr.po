@@ -1,0 +1,64 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* project_key
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-18 15:37+0000\n"
+"PO-Revision-Date: 2024-03-29 08:13+0000\n"
+"Last-Translator: Vincent Hatakeyama <vincent+github@hatakeyama.fr>\n"
+"Language-Team: none\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.17\n"
+
+#. module: project_key
+#: model:ir.model.fields,field_description:project_key.field_project_project__key
+#: model:ir.model.fields,field_description:project_key.field_project_task__key
+msgid "Key"
+msgstr "Clé"
+
+#. module: project_key
+#: model:ir.model.fields,field_description:project_key.field_project_project__task_key_sequence_id
+msgid "Key Sequence"
+msgstr "Séquence de clé"
+
+#. module: project_key
+#: model:ir.model,name:project_key.model_project_project
+msgid "Project"
+msgstr "Projet"
+
+#. module: project_key
+#: model:ir.model.constraint,message:project_key.constraint_project_project_project_key_unique
+msgid "Project key must be unique"
+msgstr "La clé de projet doit être unique"
+
+#. module: project_key
+#. odoo-python
+#: code:addons/project_key/models/project_project.py:0
+#, python-format
+msgid "Project task sequence for project"
+msgstr "Séquence des tâches pour le projet"
+
+#. module: project_key
+#: model:ir.model,name:project_key.model_project_task
+msgid "Task"
+msgstr "Tâche"
+
+#. module: project_key
+#: model:ir.model.constraint,message:project_key.constraint_project_task_task_key_unique
+msgid "Task key must be unique!"
+msgstr "La clé de tâche doit être unique !"
+
+#. module: project_key
+#: model:ir.model.fields,field_description:project_key.field_project_task__url
+msgid "URL"
+msgstr "Adresse universelle"
+
+#~ msgid "key"
+#~ msgstr "Clé"
