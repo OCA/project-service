@@ -1,0 +1,86 @@
+<odoo>
+    <record id="edit_project" model="ir.ui.view">
+        <field name="name">project.project.form</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project" />
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <field name="user_id" position="after">
+                <field name="department_id" />
+            </field>
+        </field>
+    </record>
+
+    <record id="view_project_project_filter" model="ir.ui.view">
+        <field name="name">project.project.select</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.view_project_project_filter" />
+        <field name="type">search</field>
+        <field name="arch" type="xml">
+            <field name="partner_id" position="before">
+                <field name="department_id" />
+            </field>
+            <filter name="groupby_stage" position="after">
+                <filter
+                    string="Department"
+                    name="group_department_id"
+                    context="{'group_by':'department_id'}"
+                />
+            </filter>
+        </field>
+    </record>
+
+    <record id="view_project" model="ir.ui.view">
+        <field name="name">project.project.list</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.view_project" />
+        <field name="type">list</field>
+        <field name="arch" type="xml">
+            <field name="user_id" position="after">
+                <field name="department_id" readonly="True" />
+            </field>
+        </field>
+    </record>
+
+    <record id="view_task_search_form" model="ir.ui.view">
+        <field name="name">project.task.search.form</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_search_form" />
+        <field name="arch" type="xml">
+            <field name="user_ids" position="after">
+                <field name="project_department_id" />
+            </field>
+            <filter name="my_tasks" position="after">
+                <filter
+                    string="Project Department"
+                    name="group_department_id"
+                    context="{'group_by':'project_department_id'}"
+                />
+            </filter>
+        </field>
+    </record>
+
+    <record id="view_task_form2" model="ir.ui.view">
+        <field name="name">project.task.department.form</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2" />
+        <field eval="2" name="priority" />
+        <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+                <field name="project_department_id" />
+            </field>
+        </field>
+    </record>
+
+    <record id="view_task_tree2" model="ir.ui.view">
+        <field name="name">project.task.department.tree</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_tree2" />
+        <field eval="2" name="priority" />
+        <field name="arch" type="xml">
+            <field name="user_ids" position="after">
+                <field name="project_department_id" />
+            </field>
+        </field>
+    </record>
+</odoo>

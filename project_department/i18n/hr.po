@@ -1,0 +1,44 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * project_department
+#
+# Translators:
+# OCA Transbot <transbot@odoo-community.org>, 2017
+# Bole <bole@dajmi5.com>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-07-06 02:45+0000\n"
+"PO-Revision-Date: 2023-02-15 17:23+0000\n"
+"Last-Translator: Bole <bole@dajmi5.com>\n"
+"Language-Team: Croatian (https://www.transifex.com/oca/teams/23907/hr/)\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.14.1\n"
+
+#. module: project_department
+#: model_terms:ir.ui.view,arch_db:project_department.view_project_project_filter
+msgid "Department"
+msgstr "Odjel"
+
+#. module: project_department
+#: model:ir.model,name:project_department.model_project_project
+msgid "Project"
+msgstr "Projekt"
+
+#. module: project_department
+#: model:ir.model.fields,field_description:project_department.field_project_project__department_id
+#: model:ir.model.fields,field_description:project_department.field_project_task__project_department_id
+#: model_terms:ir.ui.view,arch_db:project_department.view_task_search_form
+msgid "Project Department"
+msgstr "Projektni odjel"
+
+#. module: project_department
+#: model:ir.model,name:project_department.model_project_task
+msgid "Task"
+msgstr "Zadatak"

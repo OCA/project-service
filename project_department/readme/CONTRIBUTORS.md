@@ -1,0 +1,11 @@
+- Joël Grand-Guillaume \<<joel.grandguillaume@camptocamp.com>\>
+- Daniel Reis \<<dreis.pt@hotmail.com>\>
+- Yannick Vaucher \<<yannick.vaucher@camptocamp.com>\>
+- Dave Burkholder \<<dave@thinkwelldesigns.com>\>
+- Artem Kostyuk \<<a.kostyuk@mobilunity.com>\>
+- Vaidehi Vasani \<<er.vaidehi.vasani@gmail.com>\>
+- [Tecnativa](https://www.tecnativa.com)
+  - Carlos Roca
+- [Binhex](https://binhex.cloud//com):
+  - David Luis Mora \<<d.luis@binhex.cloud>\>
+- `Heliconia Solutions Pvt. Ltd. <https://www.heliconia.io>`_
