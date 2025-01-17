@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="project_invoice_form" model="ir.ui.view">
+        <field name="name">Add timesheet time controls</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="hr_timesheet.project_invoice_form" />
+        <field name="arch" type="xml">
+            <div name="button_box" position="inside">
+                <field
+                    name="show_time_control"
+                    invisible="1"
+                    groups="hr_timesheet.group_hr_timesheet_user"
+                />
+                <button
+                    name="button_start_work"
+                    string="Start work"
+                    type="object"
+                    icon="fa-play-circle text-success"
+                    invisible="show_time_control != 'start'"
+                    class="oe_stat_button"
+                    title="Start work"
+                    groups="hr_timesheet.group_hr_timesheet_user"
+                />
+                <button
+                    name="button_end_work"
+                    string="Stop work"
+                    type="object"
+                    icon="fa-stop-circle text-warning"
+                    invisible="show_time_control != 'stop'"
+                    class="oe_stat_button"
+                    title="End work"
+                    groups="hr_timesheet.group_hr_timesheet_user"
+                />
+            </div>
+        </field>
+    </record>
+    <record id="view_project_kanban_inherited" model="ir.ui.view">
+        <field name="name">Add timesheet time controls</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="hr_timesheet.view_project_kanban_inherited" />
+        <field name="arch" type="xml">
+            <xpath expr="//*[hasclass('o_project_kanban_boxes')]" position="inside">
+                <field
+                    name="show_time_control"
+                    invisible="1"
+                    groups="hr_timesheet.group_hr_timesheet_user"
+                />
+                <a
+                    name="button_start_work"
+                    tabindex="-1"
+                    type="object"
+                    invisible="show_time_control != 'start'"
+                    class="o_project_kanban_box"
+                    groups="hr_timesheet.group_hr_timesheet_user"
+                >
+                    <div>
+                        <span class="o_label">
+                            <i class="fa fa-lg fa-play-circle text-success" />
+                            Start work
+                        </span>
+                    </div>
+                </a>
+                <a
+                    name="button_end_work"
+                    tabindex="-1"
+                    type="object"
+                    invisible="show_time_control != 'stop'"
+                    class="o_project_kanban_box"
+                    groups="hr_timesheet.group_hr_timesheet_user"
+                >
+                    <div>
+                        <span class="o_label">
+                            <i class="fa fa-lg fa-stop-circle text-warning" />
+                            Stop work
+                        </span>
+                    </div>
+                </a>
+            </xpath>
+        </field>
+    </record>
+    <record id="view_project_tree" model="ir.ui.view">
+        <field name="name">Add timesheet time controls</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.view_project" />
+        <field name="arch" type="xml">
+            <list position="inside">
+                <field
+                    name="show_time_control"
+                    invisible="1"
+                    groups="hr_timesheet.group_hr_timesheet_user"
+                />
+                <button
+                    name="button_start_work"
+                    string="Start work"
+                    tabindex="-1"
+                    type="object"
+                    icon="fa-play-circle text-success"
+                    invisible="show_time_control != 'start'"
+                    class="oe_stat_button"
+                    title="Start work"
+                    groups="hr_timesheet.group_hr_timesheet_user"
+                />
+                <button
+                    name="button_end_work"
+                    string="Stop work"
+                    tabindex="-1"
+                    type="object"
+                    icon="fa-stop-circle text-warning"
+                    invisible="show_time_control != 'stop'"
+                    class="oe_stat_button"
+                    title="End work"
+                    groups="hr_timesheet.group_hr_timesheet_user"
+                />
+            </list>
+        </field>
+    </record>
+</odoo>

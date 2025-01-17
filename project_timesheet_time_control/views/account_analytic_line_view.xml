@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="account_analytic_line_tree" model="ir.ui.view">
+        <field name="model">account.analytic.line</field>
+        <field name="inherit_id" ref="hr_timesheet.hr_timesheet_line_tree" />
+        <field name="arch" type="xml">
+            <field name="date" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+            <field name="date" position="after">
+                <field name="date_time" required="1" />
+                <field name="date_time_end" optional="hide" />
+            </field>
+            <field name="unit_amount" position="after">
+                <field name="show_time_control" invisible="1" />
+                <button
+                    name="button_resume_work"
+                    tabindex="-1"
+                    type="object"
+                    icon="fa-play-circle text-success"
+                    invisible="show_time_control != 'resume'"
+                    class="oe_stat_button"
+                    title="Resume work"
+                />
+                <button
+                    name="button_end_work"
+                    tabindex="-1"
+                    type="object"
+                    icon="fa-stop-circle text-warning"
+                    invisible="show_time_control != 'stop'"
+                    class="oe_stat_button"
+                    title="Stop work"
+                />
+            </field>
+        </field>
+    </record>
+    <record id="hr_timesheet_line_form" model="ir.ui.view">
+        <field name="name">account.analytic.line.form.inherit</field>
+        <field name="model">account.analytic.line</field>
+        <field name="inherit_id" ref="hr_timesheet.hr_timesheet_line_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//sheet/group" position="before">
+                <div class="oe_button_box" name="button_box">
+                    <field name="show_time_control" invisible="1" />
+                    <button
+                        name="button_resume_work"
+                        type="object"
+                        icon="fa-play-circle text-success"
+                        invisible="show_time_control != 'resume'"
+                        class="oe_stat_button"
+                        context="{'show_created_timer': True}"
+                        title="Resume work"
+                    />
+                    <button
+                        name="button_end_work"
+                        type="object"
+                        icon="fa-stop-circle text-warning"
+                        invisible="show_time_control != 'stop'"
+                        class="oe_stat_button"
+                        title="Stop work"
+                    />
+                </div>
+            </xpath>
+            <field name="date" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+            <field name="date" position="after">
+                <field name="date_time" required="1" />
+                <field name="date_time_end" />
+            </field>
+        </field>
+    </record>
+    <record id="view_kanban_account_analytic_line" model="ir.ui.view">
+        <field name="name">account.analytic.line.kanban</field>
+        <field name="model">account.analytic.line</field>
+        <field name="inherit_id" ref="hr_timesheet.view_kanban_account_analytic_line" />
+        <field name="arch" type="xml">
+            <xpath expr="//templates//field[@name='unit_amount']" position="after">
+                <field name="show_time_control" invisible="1" />
+                <a
+                    name="button_resume_work"
+                    string="Resume work"
+                    tabindex="-1"
+                    type="object"
+                    invisible="show_time_control != 'resume'"
+                    class="o_kanban_inline_block fa fa-lg fa-play-circle text-success"
+                    title="Start work"
+                />
+                <a
+                    name="button_end_work"
+                    string="Stop work"
+                    tabindex="-1"
+                    type="object"
+                    invisible="show_time_control != 'stop'"
+                    class="o_kanban_inline_block fa fa-lg fa-stop-circle text-warning"
+                    title="End work"
+                />
+            </xpath>
+            <field name="date" position="after">
+                <field name="date_time" />
+                <field name="date_time_end" />
+            </field>
+            <xpath expr="//templates//field[@name='date']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//templates//field[@name='date']" position="after">
+                <field name="date_time" />
+                <t t-if="date_time_end">
+                    <br />
+                    <span>to</span>
+                    <field name="date_time_end" />
+                </t>
+            </xpath>
+        </field>
+    </record>
+</odoo>
