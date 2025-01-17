@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+    <record id="project.project_stage_1" model="project.task.type">
+        <field name="task_state">01_in_progress</field>
+    </record>
+    <record id="project.project_stage_2" model="project.task.type">
+        <field name="task_state">1_done</field>
+    </record>
+    <record id="project.project_stage_3" model="project.task.type">
+        <field name="task_state">1_canceled</field>
+    </record>
+</odoo>
