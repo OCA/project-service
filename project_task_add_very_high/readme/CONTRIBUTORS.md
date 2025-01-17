@@ -1,0 +1,3 @@
+- Andrea Stirpe \<<a.stirpe@onestein.nl>\>
+- Yves Goldberg (Ygol InternetWork) <yves@ygol.com>
+- `Heliconia Solutions Pvt. Ltd. <https://www.heliconia.io>`_

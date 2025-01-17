@@ -1,0 +1,49 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* project_task_add_very_high
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2023-10-29 23:49+0000\n"
+"Last-Translator: Ignacio Buioli <ibuioli@gmail.com>\n"
+"Language-Team: none\n"
+"Language: es_AR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17\n"
+
+#. module: project_task_add_very_high
+#: model:ir.model.fields.selection,name:project_task_add_very_high.selection__project_task__priority__3
+msgid "Most Important"
+msgstr "Más Importante"
+
+#. module: project_task_add_very_high
+#: model:ir.model.fields,field_description:project_task_add_very_high.field_project_task__priority
+msgid "Priority"
+msgstr "Prioridad"
+
+#. module: project_task_add_very_high
+#: model:ir.model,name:project_task_add_very_high.model_project_task
+msgid "Task"
+msgstr "Tarea"
+
+#. module: project_task_add_very_high
+#: model:ir.model.fields.selection,name:project_task_add_very_high.selection__project_task__priority__2
+msgid "Very High"
+msgstr "Muy Alta"
+
+#~ msgid "Display Name"
+#~ msgstr "Mostrar Nombre"
+
+#~ msgid "High"
+#~ msgstr "Alta"
+
+#~ msgid "ID"
+#~ msgstr "ID"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Última Modificación el"
