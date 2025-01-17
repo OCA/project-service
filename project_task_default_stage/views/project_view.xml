@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="task_type_edit" model="ir.ui.view">
+        <field name="name">project.task.type.form.inherit</field>
+        <field name="model">project.task.type</field>
+        <field name="inherit_id" ref="project.task_type_edit" />
+        <field name="arch" type="xml">
+            <field name="fold" position="before">
+                <field name="case_default" />
+            </field>
+        </field>
+    </record>
+    <record id="task_type_tree" model="ir.ui.view">
+        <field name="name">project.task.type.list.inherit</field>
+        <field name="model">project.task.type</field>
+        <field name="inherit_id" ref="project.task_type_tree" />
+        <field name="arch" type="xml">
+            <field name="fold" position="before">
+                <field name="case_default" />
+            </field>
+        </field>
+    </record>
+    <record id="edit_project" model="ir.ui.view">
+        <field name="name">project.project.form.inherit</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project" />
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Project Stages" name="project_stages">
+                    <field name="type_ids">
+                        <list>
+                            <field name="sequence" widget="handle" optional="show" />
+                            <field name="name" />
+                            <field name="fold" optional="show" />
+                            <field name="mail_template_id" optional="show" />
+                            <field
+                                name="rating_template_id"
+                                optional="show"
+                                groups="project.group_project_rating"
+                            />
+                            <field
+                                name="auto_validation_state"
+                                optional="hide"
+                                groups="project.group_project_rating"
+                            />
+                        </list>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
