@@ -1,0 +1,53 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* project_template
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2020-10-19 07:08+0000\n"
+"Last-Translator: Yves Goldberg <admin@ygol.com>\n"
+"Language-Team: none\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
+"n % 10 == 0) ? 2 : 3));\n"
+"X-Generator: Weblate 3.10\n"
+
+#. module: project_template
+#: model_terms:ir.ui.view,arch_db:project_template.project_template_view_inherit_form
+msgid "Create Project From Template"
+msgstr "צור תיק על פי תבנית"
+
+#. module: project_template
+#: model_terms:ir.ui.view,arch_db:project_template.project_template_view_inherit_kanban
+msgid "Create Project from Template"
+msgstr "צור תיק על פי תבנית"
+
+#. module: project_template
+#: model:ir.model.fields,field_description:project_template.field_project_project__is_template
+msgid "Is Template"
+msgstr "האם תבנית"
+
+#. module: project_template
+#: model_terms:ir.ui.view,arch_db:project_template.project_template_view_inherit_form
+msgid "Is Template?"
+msgstr "האם תבנית?"
+
+#. module: project_template
+#: model_terms:ir.ui.view,arch_db:project_template.project_template_view_inherit_search
+msgid "Non-Templates"
+msgstr "ללא תבנית"
+
+#. module: project_template
+#: model:ir.model,name:project_template.model_project_project
+msgid "Project"
+msgstr "פרויקט"
+
+#. module: project_template
+#: model_terms:ir.ui.view,arch_db:project_template.project_template_view_inherit_search
+msgid "Templates"
+msgstr "תבניות"
