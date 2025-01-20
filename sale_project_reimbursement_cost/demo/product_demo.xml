@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2024 Tecnativa - Pedro M. Baeza
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+<odoo>
+    <record id="product_provision" model="product.product">
+        <field name="name">Provision</field>
+        <field name="type">service</field>
+        <field name="uom_id" ref="uom.product_uom_unit" />
+        <field name="uom_po_id" ref="uom.product_uom_unit" />
+    </record>
+    <record id="product_service_task" model="product.product">
+        <field name="name">Service task</field>
+        <field name="type">service</field>
+        <field name="uom_id" ref="uom.product_uom_hour" />
+        <field name="uom_po_id" ref="uom.product_uom_hour" />
+        <field name="service_tracking">task_in_project</field>
+        <field name="service_policy">ordered_prepaid</field>
+    </record>
+    <record id="product_reimbursement" model="product.product">
+        <field name="name">Reimbursement</field>
+        <field name="type">service</field>
+        <field name="uom_id" ref="uom.product_uom_unit" />
+        <field name="uom_po_id" ref="uom.product_uom_unit" />
+        <field name="service_policy">delivered_manual</field>
+        <field name="expense_policy">cost</field>
+        <field name="provision_product_id" ref="product_provision" />
+    </record>
+</odoo>

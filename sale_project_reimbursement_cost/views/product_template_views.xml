@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="view_product_template_form" model="ir.ui.view">
+        <field name="name">view.product.template.form</field>
+        <field name="model">product.template</field>
+        <field
+            name="inherit_id"
+            ref="sale_project.product_template_form_view_invoice_policy_inherit_sale_project"
+        />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='expense_policy']" position="after">
+                <field
+                    name="provision_product_id"
+                    invisible="type != 'service' or expense_policy not in ('cost', 'sales_price')"
+                    required="type == 'service' and expense_policy in ('cost', 'sales_price')"
+                    groups="analytic.group_analytic_accounting"
+                />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
