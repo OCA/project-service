@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2025 Ángel García de la Chica Herrera <angel.garcia@sygel.es>
+ License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record
+        id="project_task_required_project_res_config_settings_view_form"
+        model="ir.ui.view"
+    >
+        <field
+            name="name"
+        >project.task.required.project.res.config.settings.view.form</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="project.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='project_stages']" position='after'>
+                <div class="col-12 col-lg-6 o_setting_box" id="is_project_required">
+                    <div class="o_setting_left_pane">
+                        <field name="is_project_required" />
+                    </div>
+                    <div class="o_setting_right_pane">
+                        <label for="is_project_required" />
+                        <div class="text-muted">
+                            If it is active, selecting a project when creating or editing a task will be required.
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>
