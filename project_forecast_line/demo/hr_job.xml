@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="hr.job_consultant" model="hr.job">
+        <field name="role_id" ref="forecast_role_consultant" />
+    </record>
+    <record id="hr.job_developer" model="hr.job">
+        <field name="role_id" ref="forecast_role_dev" />
+    </record>
+</odoo>

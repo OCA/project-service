@@ -1,0 +1,600 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* project_forecast_line
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: project_forecast_line
+#: model_terms:ir.ui.view,arch_db:project_forecast_line.res_config_settings_view_form
+msgid "Allow to see forecast dates on quotations"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:project.task,legend_blocked:project_forecast_line.software_project_task_consultant
+#: model:project.task,legend_blocked:project_forecast_line.software_project_task_consultant_cust_test
+#: model:project.task,legend_blocked:project_forecast_line.software_project_task_consultant_internal_test
+#: model:project.task,legend_blocked:project_forecast_line.software_project_task_dev
+#: model:project.task,legend_blocked:project_forecast_line.software_project_task_pm
+msgid "Blocked"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model,name:project_forecast_line.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__company_id
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_employee_forecast_role__company_id
+msgid "Company"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model,name:project_forecast_line.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.ui.menu,name:project_forecast_line.menu_forecast_config
+msgid "Configuration"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields.selection,name:project_forecast_line.selection__forecast_line__type__confirmed
+#: model:ir.model.fields.selection,name:project_forecast_line.selection__project_project_stage__forecast_line_type__confirmed
+#: model_terms:ir.ui.view,arch_db:project_forecast_line.view_forecast_line_search
+msgid "Confirmed"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__confirmed_consolidated_forecast
+msgid "Confirmed lines consolidated forecast"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__consolidated_forecast
+msgid "Consolidated Forecast"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,help:project_forecast_line.field_forecast_line__consolidated_forecast
+msgid "Consolidated forecast for lines of all types consumed"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,help:project_forecast_line.field_forecast_line__confirmed_consolidated_forecast
+msgid "Consolidated forecast for lines of type confirmed"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:product.product,name:project_forecast_line.product_product_consultant
+#: model:product.template,name:project_forecast_line.product_product_consultant_product_template
+msgid "Consultant"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__cost
+msgid "Cost"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,help:project_forecast_line.field_forecast_line__cost
+msgid ""
+"Cost, in company currency. Cost is positive for things which add forecast, "
+"such as employees and negative for things which consume forecast such as "
+"holidays, sales, or tasks. "
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_project_task__create_date
+msgid "Created On"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__create_uid
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line_mixin__create_uid
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_role__create_uid
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_employee_forecast_role__create_uid
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_leave__create_uid
+#: model:ir.model.fields,field_description:project_forecast_line.field_project_task__create_uid
+#: model:ir.model.fields,field_description:project_forecast_line.field_resource_calendar_leaves__create_uid
+#: model:ir.model.fields,field_description:project_forecast_line.field_sale_order_line__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__create_date
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line_mixin__create_date
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_role__create_date
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_employee_forecast_role__create_date
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_leave__create_date
+#: model:ir.model.fields,field_description:project_forecast_line.field_resource_calendar_leaves__create_date
+#: model:ir.model.fields,field_description:project_forecast_line.field_sale_order_line__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_employee_forecast_role__date_end
+msgid "Date End"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__date_from
+msgid "Date From"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_employee_forecast_role__date_start
+msgid "Date Start"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__date_to
+msgid "Date To"
+msgstr ""
+
+#. module: project_forecast_line
+#: model_terms:ir.ui.view,arch_db:project_forecast_line.view_forecast_line_search
+msgid "Date from"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,help:project_forecast_line.field_forecast_line__date_from
+msgid "Date of the period start for this line"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields.selection,name:project_forecast_line.selection__res_company__forecast_line_granularity__day
+msgid "Day"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_sale_order__default_forecast_date_end
+msgid "Default Forecast Date End"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_sale_order__default_forecast_date_start
+msgid "Default Forecast Date Start"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_role__description
+msgid "Description"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__display_name
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line_mixin__display_name
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_role__display_name
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_employee_forecast_role__display_name
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_leave__display_name
+#: model:ir.model.fields,field_description:project_forecast_line.field_project_task__display_name
+#: model:ir.model.fields,field_description:project_forecast_line.field_resource_calendar_leaves__display_name
+#: model:ir.model.fields,field_description:project_forecast_line.field_sale_order_line__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model,name:project_forecast_line.model_hr_employee
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__employee_id
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_employee_forecast_role__employee_id
+#: model_terms:ir.ui.view,arch_db:project_forecast_line.view_forecast_line_search
+msgid "Employee"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__employee_forecast_role_id
+msgid "Employee Forecast Role"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__employee_resource_consumption_ids
+msgid "Employee Resource Consumption"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__employee_resource_forecast_line_id
+msgid "Employee Resource Forecast Line"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model,name:project_forecast_line.model_hr_employee_forecast_role
+msgid "Employee forecast role"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model,name:project_forecast_line.model_forecast_role
+msgid "Employee role for task matching"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.actions.act_window,name:project_forecast_line.action_forecast_lines
+#: model:ir.model,name:project_forecast_line.model_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__forecast_hours
+#: model:ir.model.fields.selection,name:project_forecast_line.selection__forecast_line__type__forecast
+#: model:ir.model.fields.selection,name:project_forecast_line.selection__project_project_stage__forecast_line_type__forecast
+#: model:ir.ui.menu,name:project_forecast_line.forecast_menu_root
+#: model:ir.ui.menu,name:project_forecast_line.menu_forecast_line_consolidated
+#: model_terms:ir.ui.view,arch_db:project_forecast_line.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:project_forecast_line.view_forecast_line_search
+msgid "Forecast"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.actions.act_window,name:project_forecast_line.action_forecast_lines_consolidated
+msgid "Forecast (Consolidated)"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,help:project_forecast_line.field_forecast_line__forecast_hours
+msgid ""
+"Forecast (in hours). Forecast is positive for resources which add forecast, "
+"such as employees, and negative for things which consume forecast, such as "
+"holidays, sales, or tasks."
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_sale_order_line__forecast_date_end
+msgid "Forecast Date End"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_sale_order_line__forecast_date_start
+msgid "Forecast Date Start"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_res_company__forecast_line_granularity
+#: model:ir.model.fields,field_description:project_forecast_line.field_res_config_settings__forecast_line_granularity
+msgid "Forecast Line Granularity"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_res_company__forecast_line_horizon
+#: model:ir.model.fields,field_description:project_forecast_line.field_res_config_settings__forecast_line_horizon
+msgid "Forecast Line Horizon"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_project_project_stage__forecast_line_type
+msgid "Forecast Line Type"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_res_config_settings__group_forecast_line_on_quotation
+msgid "Forecast Line on Quotations"
+msgstr ""
+
+#. module: project_forecast_line
+#: model_terms:ir.ui.view,arch_db:project_forecast_line.res_config_settings_view_form
+msgid "Forecast Management"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_project_task__forecast_recomputation_trigger
+msgid "Forecast Recomputation Trigger"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_product_product__forecast_role_id
+#: model:ir.model.fields,field_description:project_forecast_line.field_product_template__forecast_role_id
+#: model:ir.model.fields,field_description:project_forecast_line.field_project_task__forecast_role_id
+msgid "Forecast Role"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.actions.act_window,name:project_forecast_line.action_forecast_roles
+#: model:ir.ui.menu,name:project_forecast_line.menu_forecast_role
+#: model_terms:ir.ui.view,arch_db:project_forecast_line.view_employee_form
+msgid "Forecast Roles"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.actions.server,name:project_forecast_line.cron_forecast_lines_ir_actions_server
+#: model:ir.cron,cron_name:project_forecast_line.cron_forecast_lines
+#: model:ir.cron,name:project_forecast_line.cron_forecast_lines
+msgid "Forecast recomputation"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__forecast_role_id
+msgid "Forecast role"
+msgstr ""
+
+#. module: project_forecast_line
+#: model_terms:ir.ui.view,arch_db:project_forecast_line.view_forecast_line_search
+msgid "Group By"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:product.product,uom_name:project_forecast_line.product_product_consultant
+#: model:product.product,uom_name:project_forecast_line.product_product_dev
+#: model:product.product,uom_name:project_forecast_line.product_product_pm
+#: model:product.template,uom_name:project_forecast_line.product_product_consultant_product_template
+#: model:product.template,uom_name:project_forecast_line.product_product_dev_product_template
+#: model:product.template,uom_name:project_forecast_line.product_product_pm_product_template
+msgid "Hours"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__id
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line_mixin__id
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_role__id
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_employee_forecast_role__id
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_leave__id
+#: model:ir.model.fields,field_description:project_forecast_line.field_project_task__id
+#: model:ir.model.fields,field_description:project_forecast_line.field_resource_calendar_leaves__id
+#: model:ir.model.fields,field_description:project_forecast_line.field_sale_order_line__id
+msgid "ID"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:project.task,legend_normal:project_forecast_line.software_project_task_consultant
+#: model:project.task,legend_normal:project_forecast_line.software_project_task_consultant_cust_test
+#: model:project.task,legend_normal:project_forecast_line.software_project_task_consultant_internal_test
+#: model:project.task,legend_normal:project_forecast_line.software_project_task_dev
+#: model:project.task,legend_normal:project_forecast_line.software_project_task_pm
+msgid "In Progress"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model,name:project_forecast_line.model_hr_job
+msgid "Job Position"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line____last_update
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line_mixin____last_update
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_role____last_update
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_employee_forecast_role____last_update
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_leave____last_update
+#: model:ir.model.fields,field_description:project_forecast_line.field_project_task____last_update
+#: model:ir.model.fields,field_description:project_forecast_line.field_resource_calendar_leaves____last_update
+#: model:ir.model.fields,field_description:project_forecast_line.field_sale_order_line____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_project_task__write_date
+msgid "Last Updated On"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__write_uid
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line_mixin__write_uid
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_role__write_uid
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_employee_forecast_role__write_uid
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_leave__write_uid
+#: model:ir.model.fields,field_description:project_forecast_line.field_project_task__write_uid
+#: model:ir.model.fields,field_description:project_forecast_line.field_resource_calendar_leaves__write_uid
+#: model:ir.model.fields,field_description:project_forecast_line.field_sale_order_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__write_date
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line_mixin__write_date
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_role__write_date
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_employee_forecast_role__write_date
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_leave__write_date
+#: model:ir.model.fields,field_description:project_forecast_line.field_resource_calendar_leaves__write_date
+#: model:ir.model.fields,field_description:project_forecast_line.field_sale_order_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: project_forecast_line
+#: code:addons/project_forecast_line/models/hr_leave.py:0
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__hr_leave_id
+#, python-format
+msgid "Leave"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_employee__main_role_id
+msgid "Main Role"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:res.groups,name:project_forecast_line.group_forecast_line_on_quotation
+msgid "Manage Forecast Dates on Quotations"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__res_model
+#: model_terms:ir.ui.view,arch_db:project_forecast_line.view_forecast_line_search
+msgid "Model"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields.selection,name:project_forecast_line.selection__res_company__forecast_line_granularity__month
+msgid "Month"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__name
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_role__name
+msgid "Name"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,help:project_forecast_line.field_res_company__forecast_line_horizon
+#: model:ir.model.fields,help:project_forecast_line.field_res_config_settings__forecast_line_horizon
+#: model_terms:ir.ui.view,arch_db:project_forecast_line.res_config_settings_view_form
+msgid "Number of month for the forecast planning"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:project.project,name:project_forecast_line.software_project_1
+msgid "Odoo implementation"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,help:project_forecast_line.field_res_company__forecast_line_granularity
+#: model:ir.model.fields,help:project_forecast_line.field_res_config_settings__forecast_line_granularity
+#: model_terms:ir.ui.view,arch_db:project_forecast_line.res_config_settings_view_form
+msgid "Periodicity of the forecast that will be generated"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_project_task__forecast_date_planned_end
+msgid "Planned end date"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_project_task__forecast_date_planned_start
+msgid "Planned start date"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model,name:project_forecast_line.model_product_template
+msgid "Product Template"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__project_id
+#: model_terms:ir.ui.view,arch_db:project_forecast_line.view_forecast_line_search
+msgid "Project"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:product.product,name:project_forecast_line.product_product_pm
+#: model:product.template,name:project_forecast_line.product_product_pm_product_template
+msgid "Project Manager"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model,name:project_forecast_line.model_project_project_stage
+msgid "Project Stage"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_employee_forecast_role__rate
+msgid "Rate"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:project.task,legend_done:project_forecast_line.software_project_task_consultant
+#: model:project.task,legend_done:project_forecast_line.software_project_task_consultant_cust_test
+#: model:project.task,legend_done:project_forecast_line.software_project_task_consultant_internal_test
+#: model:project.task,legend_done:project_forecast_line.software_project_task_dev
+#: model:project.task,legend_done:project_forecast_line.software_project_task_pm
+msgid "Ready"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__res_id
+msgid "Record ID"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model,name:project_forecast_line.model_resource_calendar_leaves
+msgid "Resource Time Off Detail"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_employee__role_ids
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_employee_forecast_role__role_id
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_job__role_id
+#: model_terms:ir.ui.view,arch_db:project_forecast_line.view_forecast_line_search
+msgid "Role"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__sale_id
+msgid "Sale"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__sale_line_id
+msgid "Sale line"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model,name:project_forecast_line.model_sale_order
+msgid "Sales Order"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model,name:project_forecast_line.model_sale_order_line
+msgid "Sales Order Line"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_employee_forecast_role__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.actions.act_window,name:project_forecast_line.forecast_config_settings_action
+#: model:ir.ui.menu,name:project_forecast_line.forecast_config_settings_menu_action
+msgid "Settings"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:product.product,name:project_forecast_line.product_product_dev
+#: model:product.template,name:project_forecast_line.product_product_dev_product_template
+msgid "Software Developer"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model,name:project_forecast_line.model_project_task
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__task_id
+msgid "Task"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:project.project,label_tasks:project_forecast_line.software_project_1
+msgid "Tasks"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,help:project_forecast_line.field_project_task__forecast_recomputation_trigger
+msgid "Technical field used to trigger the forecast recomputation"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model,name:project_forecast_line.model_hr_leave
+msgid "Time Off"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__type
+msgid "Type"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields.selection,name:project_forecast_line.selection__res_company__forecast_line_granularity__week
+msgid "Week"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model,name:project_forecast_line.model_forecast_line_mixin
+msgid "mixin for models which generate forecast lines"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,help:project_forecast_line.field_forecast_line__employee_resource_forecast_line_id
+msgid ""
+"technical field giving the name of the resource "
+"(model=hr.employee.forecast.role) line for that employee and that period"
+msgstr ""
+
+#. module: project_forecast_line
+#: model:ir.model.fields,help:project_forecast_line.field_project_project_stage__forecast_line_type
+msgid "type of forecast lines created by the tasks of projects in that stage"
+msgstr ""

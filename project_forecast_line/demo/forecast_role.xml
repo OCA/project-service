@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="forecast_role_pm" model="forecast.role">
+        <field name="name">Project Manager</field>
+        <field name="description">Takes care of project management tasks</field>
+    </record>
+    <record id="forecast_role_consultant" model="forecast.role">
+        <field name="name">Consultant</field>
+        <field name="description">Takes care of business analysis</field>
+    </record>
+    <record id="forecast_role_dev" model="forecast.role">
+        <field name="name">Software Development</field>
+        <field name="description">Takes care of writing code and solving bugs</field>
+    </record>
+</odoo>

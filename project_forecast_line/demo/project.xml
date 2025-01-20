@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="project.project_project_stage_1" model="project.project.stage">
+        <field name="forecast_line_type">confirmed</field>
+    </record>
+
+    <record id="software_project_1" model="project.project">
+        <field name="date_start" eval="time.strftime('%Y-%m-01 10:00:00')" />
+        <field name="name">Odoo implementation</field>
+        <field name="color">3</field>
+        <field name="user_id" ref="base.user_demo" />
+        <field
+            name="type_ids"
+            eval="[(4, ref('project.project_stage_0')), (4, ref('project.project_stage_1')), (4, ref('project.project_stage_2')), (4, ref('project.project_stage_3'))]"
+        />
+        <field name="partner_id" ref="base.partner_demo_portal" />
+        <field name="privacy_visibility">portal</field>
+        <field name="favorite_user_ids" eval="[(4, ref('base.user_admin'))]" />
+        <field name="tag_ids" eval="[(4, ref('project.project_tags_05'))]" />
+        <field name="stage_id" ref="project.project_project_stage_1" />
+    </record>
+
+    <record id="software_project_task_pm" model="project.task">
+            <field name="planned_hours" eval="40.0" />
+            <field name="user_ids" eval="[(4, ref('base.user_demo'))]" />
+            <field name="priority">0</field>
+            <field name="project_id" ref="software_project_1" />
+            <field name="name">Project Management</field>
+            <field name="stage_id" ref="project.project_stage_0" />
+            <field name="color">3</field>
+            <field name="create_date" eval="DateTime.now() - relativedelta(months=5)" />
+            <field name="forecast_role_id" ref="forecast_role_pm" />
+            <field
+            name="forecast_date_planned_start"
+            eval="DateTime.now() + relativedelta(weeks=2)"
+        />
+            <field
+            name="forecast_date_planned_end"
+            eval="DateTime.now() + relativedelta(months=2)"
+        />
+    </record>
+
+        <record id="software_project_task_consultant" model="project.task">
+            <field name="planned_hours" eval="80.0" />
+            <field name="priority">0</field>
+            <field name="project_id" ref="software_project_1" />
+            <field name="name">Workshops</field>
+            <field name="stage_id" ref="project.project_stage_0" />
+            <field name="color">3</field>
+            <field name="create_date" eval="DateTime.now() - relativedelta(months=5)" />
+            <field name="forecast_role_id" ref="forecast_role_consultant" />
+            <field
+            name="forecast_date_planned_start"
+            eval="DateTime.now() + relativedelta(weeks=2)"
+        />
+            <field
+            name="forecast_date_planned_end"
+            eval="DateTime.now() + relativedelta(weeks=4)"
+        />
+            <field name="user_ids" eval="[(6, 0, [ref('user_jep')])]" />
+        </record>
+        <record id="software_project_task_dev" model="project.task">
+            <field name="planned_hours" eval="150.0" />
+            <field name="priority">0</field>
+            <field name="project_id" ref="software_project_1" />
+            <field name="name">Software Development</field>
+            <field name="stage_id" ref="project.project_stage_0" />
+            <field name="color">3</field>
+            <field name="create_date" eval="DateTime.now() - relativedelta(months=5)" />
+            <field name="forecast_role_id" ref="forecast_role_dev" />
+            <field
+            name="forecast_date_planned_start"
+            eval="DateTime.now() + relativedelta(weeks=3)"
+        />
+            <field
+            name="forecast_date_planned_end"
+            eval="DateTime.now() + relativedelta(weeks=6)"
+        />
+            <field name="user_ids" eval="[(6, 0, [ref('user_chs')])]" />
+        </record>
+        <record
+        id="software_project_task_consultant_internal_test"
+        model="project.task"
+    >
+            <field name="planned_hours" eval="30.0" />
+            <field name="priority">0</field>
+            <field name="project_id" ref="software_project_1" />
+            <field name="name">Internal Testing</field>
+            <field name="stage_id" ref="project.project_stage_0" />
+            <field name="color">3</field>
+            <field name="create_date" eval="DateTime.now() - relativedelta(months=5)" />
+            <field name="forecast_role_id" ref="forecast_role_consultant" />
+            <field
+            name="forecast_date_planned_start"
+            eval="DateTime.now() + relativedelta(weeks=3)"
+        />
+            <field
+            name="forecast_date_planned_end"
+            eval="DateTime.now() + relativedelta(weeks=6)"
+        />
+            <field name="user_ids" eval="[(6, 0, [ref('user_jep')])]" />
+        </record>
+        <record id="software_project_task_consultant_cust_test" model="project.task">
+            <field name="planned_hours" eval="15.0" />
+            <field name="priority">0</field>
+            <field name="project_id" ref="software_project_1" />
+            <field name="name">Customer Tests</field>
+            <field name="stage_id" ref="project.project_stage_0" />
+            <field name="color">3</field>
+            <field name="create_date" eval="DateTime.now() - relativedelta(months=5)" />
+            <field name="forecast_role_id" ref="forecast_role_consultant" />
+            <field
+            name="forecast_date_planned_start"
+            eval="DateTime.now() + relativedelta(weeks=6)"
+        />
+            <field
+            name="forecast_date_planned_end"
+            eval="DateTime.now() + relativedelta(months=2)"
+        />
+            <field name="user_ids" eval="[(6, 0, [ref('user_jep')])]" />
+    </record>
+</odoo>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.forecast</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('settings')]" position="inside">
+                <div
+                    class="app_settings_block"
+                    data-string="Forecast"
+                    string="Forecast"
+                    data-key="project_forecast_line"
+                    groups="hr.group_hr_user"
+                >
+                    <h2>Forecast Management</h2>
+                    <div class="row mt16 o_settings_container" id="forecast_management">
+                        <div
+                            class="col-12 col-lg-6 o_setting_box"
+                            id="forecast_line_settings"
+                        >
+                            <div class="o_setting_left_pane">
+                                <field name="group_forecast_line_on_quotation" />
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="group_forecast_line_on_quotation" />
+                                <div class="text-muted">
+                                    Allow to see forecast dates on quotations
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt8">
+                                        <label for="forecast_line_granularity" />
+                                        <div class="text-muted">
+                                            Periodicity of the forecast that will be generated
+                                        </div>
+                                        <field
+                                            name="forecast_line_granularity"
+                                            required="1"
+                                            class="o_light_label"
+                                        />
+                                    </div>
+                                    <div class="mt8">
+                                        <label for="forecast_line_horizon" />
+                                        <div class="text-muted">
+                                            Number of month for the forecast planning
+                                        </div>
+                                        <field
+                                            name="forecast_line_horizon"
+                                            required="1"
+                                            class="o_field_integer o_field_number o_field_widget o_input oe_inline col-lg-2"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+    <record id="forecast_config_settings_action" model="ir.actions.act_window">
+        <field name="name">Settings</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.config.settings</field>
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+        <field name="context">{'module': 'forecast', 'bin_size': False}</field>
+    </record>
+
+    <menuitem
+        id="forecast_config_settings_menu_action"
+        name="Settings"
+        parent="menu_forecast_config"
+        sequence="0"
+        action="forecast_config_settings_action"
+        groups="base.group_system"
+    />
+</odoo>

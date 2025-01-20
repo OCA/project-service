@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="role_employee_mit" model="hr.employee.forecast.role">
+        <field name="employee_id" ref="hr.employee_mit" />
+        <field name="role_id" ref="forecast_role_dev" />
+    </record>
+    <record id="role_employee_niv" model="hr.employee.forecast.role">
+        <field name="employee_id" ref="hr.employee_niv" />
+        <field name="role_id" ref="forecast_role_dev" />
+    </record>
+        <record id="role_employee_stw" model="hr.employee.forecast.role">
+        <field name="employee_id" ref="hr.employee_stw" />
+        <field name="role_id" ref="forecast_role_dev" />
+    </record>
+    <record id="role_employee_chs" model="hr.employee.forecast.role">
+        <field name="employee_id" ref="hr.employee_chs" />
+        <field name="role_id" ref="forecast_role_dev" />
+    </record>
+    <record id="role_employee_qdp" model="hr.employee.forecast.role">
+        <field name="employee_id" ref="hr.employee_qdp" />
+        <field name="role_id" ref="forecast_role_dev" />
+    </record>
+    <record id="role_employee_fme" model="hr.employee.forecast.role">
+        <field name="employee_id" ref="hr.employee_fme" />
+        <field name="role_id" ref="forecast_role_dev" />
+    </record>
+    <record id="role_employee_fpi_consultant" model="hr.employee.forecast.role">
+        <field name="employee_id" ref="hr.employee_fpi" />
+        <field name="role_id" ref="forecast_role_consultant" />
+        <field name="rate" eval="60" />
+    </record>
+    <record id="role_employee_fpi_pm" model="hr.employee.forecast.role">
+        <field name="employee_id" ref="hr.employee_fpi" />
+        <field name="role_id" ref="forecast_role_pm" />
+        <field name="rate" eval="40" />
+    </record>
+    <record id="role_employee_jth" model="hr.employee.forecast.role">
+        <field name="employee_id" ref="hr.employee_jth" />
+        <field name="role_id" ref="forecast_role_consultant" />
+    </record>
+    <record id="role_employee_han" model="hr.employee.forecast.role">
+        <field name="employee_id" ref="hr.employee_han" />
+        <field name="role_id" ref="forecast_role_dev" />
+    </record>
+    <record id="role_employee_jve" model="hr.employee.forecast.role">
+        <field name="employee_id" ref="hr.employee_jve" />
+        <field name="role_id" ref="forecast_role_dev" />
+    </record>
+    <record id="role_employee_jep" model="hr.employee.forecast.role">
+        <field name="employee_id" ref="hr.employee_jep" />
+        <field name="role_id" ref="forecast_role_consultant" />
+    </record>
+    <record id="role_employee_jog" model="hr.employee.forecast.role">
+        <field name="employee_id" ref="hr.employee_jog" />
+        <field name="role_id" ref="forecast_role_dev" />
+    </record>
+    <record id="role_employee_jgo" model="hr.employee.forecast.role">
+        <field name="employee_id" ref="hr.employee_jgo" />
+        <field name="role_id" ref="forecast_role_consultant" />
+    </record>
+    <record id="role_employee_hne" model="hr.employee.forecast.role">
+        <field name="employee_id" ref="hr.employee_hne" />
+        <field name="role_id" ref="forecast_role_consultant" />
+    </record>
+
+</odoo>

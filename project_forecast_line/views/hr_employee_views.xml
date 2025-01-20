@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_employee_form" model="ir.ui.view">
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='hr_settings']/group[1]" position="inside">
+                <group string="Forecast Roles" name="forecast_roles">
+                    <field name="role_ids">
+                        <tree editable="bottom">
+                            <field name="sequence" widget="handle" />
+                            <field name="role_id" />
+                            <field name="date_start" />
+                            <field name="date_end" />
+                            <field name="rate" />
+                        </tree>
+                    </field>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_hr_job_form" model="ir.ui.view">
+        <field name="model">hr.job</field>
+        <field name="inherit_id" ref="hr.view_hr_job_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//sheet/div[hasclass('oe_title')]" position="after">
+                <group><group><field name="role_id" /></group></group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

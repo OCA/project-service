@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_forecast_role_search" model="ir.ui.view">
+        <field name="model">forecast.role</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+            </search>
+        </field>
+    </record>
+
+    <record id="view_forecast_role_list" model="ir.ui.view">
+        <field name="model">forecast.role</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+    <record id="view_forecast_role_form" model="ir.ui.view">
+        <field name="model">forecast.role</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name" />
+                        <field name="description" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_forecast_roles" model="ir.actions.act_window">
+        <field name="name">Forecast Roles</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">forecast.role</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="menu_forecast_role"
+        parent="menu_forecast_config"
+        sequence="20"
+        name="Forecast Roles"
+        action="action_forecast_roles"
+    />
+
+</odoo>

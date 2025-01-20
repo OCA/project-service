@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="cron_forecast_lines" model="ir.cron">
+        <field name="name">Forecast recomputation</field>
+        <field name="model_id" ref="project_forecast_line.model_forecast_line" />
+        <field name="user_id" ref="base.user_root" />
+        <field name="state">code</field>
+        <field name="code">model._cron_recompute_all()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+    </record>
+</odoo>

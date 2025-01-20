@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="product_product_consultant" model="product.product">
+        <field name="name">Consultant</field>
+        <field name="categ_id" ref="product.product_category_1" />
+        <field name="standard_price">80</field>
+        <field name="list_price">120</field>
+        <field name="detailed_type">service</field>
+        <field name="uom_id" ref="uom.product_uom_hour" />
+        <field name="uom_po_id" ref="uom.product_uom_hour" />
+        <field name="forecast_role_id" ref="forecast_role_consultant" />
+        <field name="service_tracking">task_in_project</field>
+        <field name="service_policy">delivered_timesheet</field>
+    </record>
+    <record id="product_product_pm" model="product.product">
+        <field name="name">Project Manager</field>
+        <field name="categ_id" ref="product.product_category_1" />
+        <field name="standard_price">950</field>
+        <field name="list_price">150</field>
+        <field name="detailed_type">service</field>
+        <field name="uom_id" ref="uom.product_uom_hour" />
+        <field name="uom_po_id" ref="uom.product_uom_hour" />
+        <field name="forecast_role_id" ref="forecast_role_pm" />
+        <field name="service_tracking">task_in_project</field>
+        <field name="service_policy">delivered_timesheet</field>
+    </record>
+    <record id="product_product_dev" model="product.product">
+        <field name="name">Software Developer</field>
+        <field name="categ_id" ref="product.product_category_1" />
+        <field name="standard_price">80</field>
+        <field name="list_price">120</field>
+        <field name="detailed_type">service</field>
+        <field name="uom_id" ref="uom.product_uom_hour" />
+        <field name="uom_po_id" ref="uom.product_uom_hour" />
+        <field name="forecast_role_id" ref="forecast_role_dev" />
+        <field name="service_tracking">task_in_project</field>
+        <field name="service_policy">delivered_timesheet</field>
+    </record>
+
+</odoo>

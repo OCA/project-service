@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+        <record id="sale_order_software_project" model="sale.order">
+            <field name="partner_id" ref="base.res_partner_2" />
+            <field name="partner_invoice_id" ref="base.res_partner_2" />
+            <field name="partner_shipping_id" ref="base.res_partner_2" />
+            <field name="user_id" ref="base.user_demo" />
+            <field name="pricelist_id" ref="product.list0" />
+            <field name="team_id" ref="sales_team.team_sales_department" />
+            <field name="campaign_id" ref="utm.utm_campaign_email_campaign_products" />
+            <field name="medium_id" ref="utm.utm_medium_email" />
+            <field name="source_id" ref="sale.utm_source_sale_order_0" />
+            <field
+            name="date_order"
+            eval="(DateTime.today() - relativedelta(months=1)).strftime('%Y-%m-%d %H:%M')"
+        />
+        </record>
+
+        <record id="sale_order_line_pm" model="sale.order.line">
+            <field name="order_id" ref="sale_order_software_project" />
+            <field
+            name="name"
+            model="sale.order.line"
+            eval="obj().env.ref('project_forecast_line.product_product_pm').get_product_multiline_description_sale()"
+        />
+            <field name="product_id" ref="project_forecast_line.product_product_pm" />
+            <field name="product_uom_qty">30</field>
+            <field name="product_uom" ref="uom.product_uom_hour" />
+            <field name="price_unit">295.00</field>
+            <field
+            name="forecast_date_start"
+            eval="DateTime.now() + relativedelta(weeks=2)"
+        />
+            <field
+            name="forecast_date_end"
+            eval="DateTime.now() + relativedelta(months=2)"
+        />
+        </record>
+
+        <record id="sale_order_line_consultant" model="sale.order.line">
+            <field name="order_id" ref="sale_order_software_project" />
+            <field
+            name="name"
+            model="sale.order.line"
+            eval="obj().env.ref('project_forecast_line.product_product_consultant').get_product_multiline_description_sale()"
+        />
+            <field
+            name="product_id"
+            ref="project_forecast_line.product_product_consultant"
+        />
+            <field name="product_uom_qty">300</field>
+            <field name="product_uom" ref="uom.product_uom_hour" />
+            <field name="price_unit">200.00</field>
+            <field
+            name="forecast_date_start"
+            eval="DateTime.now() + relativedelta(weeks=3)"
+        />
+            <field
+            name="forecast_date_end"
+            eval="DateTime.now() + relativedelta(weeks=6)"
+        />
+        </record>
+
+        <record id="sale_order_line_1" model="sale.order.line">
+            <field name="order_id" ref="sale_order_software_project" />
+            <field
+            name="name"
+            model="sale.order.line"
+            eval="obj().env.ref('project_forecast_line.product_product_dev').get_product_multiline_description_sale()"
+        />
+            <field name="product_id" ref="project_forecast_line.product_product_dev" />
+            <field name="product_uom_qty">200</field>
+            <field name="product_uom" ref="uom.product_uom_hour" />
+            <field name="price_unit">200.00</field>
+            <field
+            name="forecast_date_start"
+            eval="DateTime.now() + relativedelta(weeks=4)"
+        />
+            <field
+            name="forecast_date_end"
+            eval="DateTime.now() + relativedelta(months=2)"
+        />
+        </record>
+
+</odoo>

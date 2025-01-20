@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_forecast_line_search" model="ir.ui.view">
+        <field name="model">forecast.line</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="employee_id" />
+                <field name="name" string="Forecast" />
+                <field name="forecast_role_id" />
+                <field name="project_id" />
+                <field name="company_id" groups="base.group_multi_company" />
+                <filter
+                    string="Forecast"
+                    domain="[('type', '=', 'forecast')]"
+                    name="forecast_forcast_filter"
+                />
+                <filter
+                    string="Confirmed"
+                    domain="[('type', '=', 'confirmed')]"
+                    name="forecast_confirmed_filter"
+                />
+                <group expand="0" string="Group By">
+                    <filter
+                        string="Project"
+                        name="project"
+                        domain="[]"
+                        context="{'group_by': 'project_id'}"
+                    />
+                    <filter
+                        string="Role"
+                        name="role"
+                        domain="[]"
+                        context="{'group_by': 'forecast_role_id'}"
+                    />
+                    <filter
+                        string="Date from"
+                        name="date_from"
+                        domain="[]"
+                        context="{'group_by':'date_from:month'}"
+                    />
+                    <filter
+                        string="Employee"
+                        name="employee"
+                        domain="[]"
+                        context="{'group_by': 'employee_id'}"
+                    />
+                    <filter
+                        string="Model"
+                        name="model"
+                        domain="[]"
+                        context="{'group_by': 'res_model'}"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_forecast_line_list" model="ir.ui.view">
+        <field name="model">forecast.line</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="date_from" />
+                <field name="date_to" />
+                <field name="forecast_hours" />
+                <field name="cost" />
+                <field name="confirmed_consolidated_forecast" optional="show" />
+                <field name="consolidated_forecast" optional="show" />
+                <field name="forecast_role_id" />
+                <field name="currency_id" invisible="1" />
+            </tree>
+        </field>
+    </record>
+    <record id="view_forecast_line_graph" model="ir.ui.view">
+        <field name="model">forecast.line</field>
+        <field name="arch" type="xml">
+            <graph type="bar" stacked="0">
+                <field name="date_from" type="row" />
+                <field name="forecast_role_id" type="col" />
+                <field name="confirmed_consolidated_forecast" type="measure" />
+                <field name="consolidated_forecast" type="measure" />
+                <field name="cost" type="measure" />
+                <field name="forecast_hours" type="measure" />
+                <field name="currency_id" invisible="1" />
+            </graph>
+        </field>
+    </record>
+    <record id="view_forecast_line_graph_stacked" model="ir.ui.view">
+        <field name="model">forecast.line</field>
+        <field name="priority" eval="20" />
+        <field name="arch" type="xml">
+            <graph type="bar" stacked="1">
+                <field name="date_from" type="row" />
+                <field name="employee_id" type="col" />
+                <field name="project_id" type="col" />
+                <field name="confirmed_consolidated_forecast" type="measure" />
+                <field name="consolidated_forecast" type="measure" />
+            </graph>
+        </field>
+    </record>
+    <record id="view_forecast_line_pivot" model="ir.ui.view">
+        <field name="model">forecast.line</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="date_from" type="col" />
+                <field name="forecast_role_id" type="row" />
+                <field name="confirmed_consolidated_forecast" type="measure" />
+                <field name="consolidated_forecast" type="measure" />
+                <field name="cost" type="measure" />
+                <field name="forecast_hours" type="measure" />
+                <field name="currency_id" invisible="1" />
+            </pivot>
+        </field>
+    </record>
+
+    <record id="action_forecast_lines" model="ir.actions.act_window">
+        <field name="name">Forecast</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">forecast.line</field>
+        <field name="view_mode">tree,graph,pivot</field>
+    </record>
+    <record id="action_forecast_lines_consolidated" model="ir.actions.act_window">
+        <field name="name">Forecast (Consolidated)</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">forecast.line</field>
+        <field name="view_mode">graph,pivot,tree</field>
+        <field name="view_id" ref="view_forecast_line_graph_stacked" />
+        <field name="search_view_id" ref="view_forecast_line_search" />
+        <field name="domain">[('employee_id', '!=', False)]</field>
+        <field
+            name="context"
+        >{'graph_groupbys': ['date_from:month', 'project_id']}</field>
+    </record>
+
+    <menuitem
+        id="forecast_menu_root"
+        name="Forecast"
+        sequence="75"
+        groups="base.group_user"
+        action="action_forecast_lines"
+        web_icon="project_forecast_line,static/description/icon.png"
+    />
+    <menuitem
+        id="menu_forecast_config"
+        name="Configuration"
+        parent="forecast_menu_root"
+        sequence="100"
+        groups="hr.group_hr_user"
+    />
+    <menuitem
+        id="menu_forecast_line_consolidated"
+        parent="forecast_menu_root"
+        sequence="10"
+        name="Forecast"
+        action="action_forecast_lines_consolidated"
+    />
+
+</odoo>

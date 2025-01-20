@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Project Stages -->
+    <record id="project.project_project_stage_0" model="project.project.stage">
+        <field name="forecast_line_type">forecast</field>
+    </record>
+
+    <record id="project.project_project_stage_1" model="project.project.stage">
+        <field name="forecast_line_type">confirmed</field>
+    </record>
+
+    <record id="project.project_project_stage_2" model="project.project.stage">
+        <field name="forecast_line_type" />
+    </record>
+
+    <record id="project.project_project_stage_3" model="project.project.stage">
+        <field name="forecast_line_type" />
+    </record>
+</odoo>

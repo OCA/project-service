@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_task_form" model="ir.ui.view">
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2" />
+        <field name="arch" type="xml">
+            <field name="parent_id" position="before">
+                <field name="forecast_role_id" />
+            </field>
+            <field name="analytic_account_id" position="before">
+                <field name="forecast_date_planned_start" />
+                <field name="forecast_date_planned_end" />
+            </field>
+        </field>
+    </record>
+</odoo>

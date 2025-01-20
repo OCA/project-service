@@ -1,0 +1,611 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* project_forecast_line
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2024-01-20 17:33+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
+"Language-Team: none\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17\n"
+
+#. module: project_forecast_line
+#: model_terms:ir.ui.view,arch_db:project_forecast_line.res_config_settings_view_form
+msgid "Allow to see forecast dates on quotations"
+msgstr "Consente di vedere date previsionali nei preventivi"
+
+#. module: project_forecast_line
+#: model:project.task,legend_blocked:project_forecast_line.software_project_task_consultant
+#: model:project.task,legend_blocked:project_forecast_line.software_project_task_consultant_cust_test
+#: model:project.task,legend_blocked:project_forecast_line.software_project_task_consultant_internal_test
+#: model:project.task,legend_blocked:project_forecast_line.software_project_task_dev
+#: model:project.task,legend_blocked:project_forecast_line.software_project_task_pm
+msgid "Blocked"
+msgstr "Bloccata"
+
+#. module: project_forecast_line
+#: model:ir.model,name:project_forecast_line.model_res_company
+msgid "Companies"
+msgstr "Aziende"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__company_id
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_employee_forecast_role__company_id
+msgid "Company"
+msgstr "Azienda"
+
+#. module: project_forecast_line
+#: model:ir.model,name:project_forecast_line.model_res_config_settings
+msgid "Config Settings"
+msgstr "Impostazioni configurazione"
+
+#. module: project_forecast_line
+#: model:ir.ui.menu,name:project_forecast_line.menu_forecast_config
+msgid "Configuration"
+msgstr "Configurazione"
+
+#. module: project_forecast_line
+#: model:ir.model.fields.selection,name:project_forecast_line.selection__forecast_line__type__confirmed
+#: model:ir.model.fields.selection,name:project_forecast_line.selection__project_project_stage__forecast_line_type__confirmed
+#: model_terms:ir.ui.view,arch_db:project_forecast_line.view_forecast_line_search
+msgid "Confirmed"
+msgstr "Confermata"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__confirmed_consolidated_forecast
+msgid "Confirmed lines consolidated forecast"
+msgstr "Righe confermate previsionale consolidato"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__consolidated_forecast
+msgid "Consolidated Forecast"
+msgstr "Previsionale consolidato"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,help:project_forecast_line.field_forecast_line__consolidated_forecast
+msgid "Consolidated forecast for lines of all types consumed"
+msgstr "Previsionale consolidato per le righe consumate di ogni tipo"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,help:project_forecast_line.field_forecast_line__confirmed_consolidated_forecast
+msgid "Consolidated forecast for lines of type confirmed"
+msgstr "Previsionale consolidato per le righe confermate di ogni tipo"
+
+#. module: project_forecast_line
+#: model:product.product,name:project_forecast_line.product_product_consultant
+#: model:product.template,name:project_forecast_line.product_product_consultant_product_template
+msgid "Consultant"
+msgstr "Consulente"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__cost
+msgid "Cost"
+msgstr "Costo"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,help:project_forecast_line.field_forecast_line__cost
+msgid ""
+"Cost, in company currency. Cost is positive for things which add forecast, "
+"such as employees and negative for things which consume forecast such as "
+"holidays, sales, or tasks. "
+msgstr ""
+"Costo nella valuta dell'azienda. Il costo è positivo per oggetti che "
+"aggiungono previsionale, come i dipendenti, e negativo per oggetti che "
+"consumano il previsionale come le vacanze, le vendite o i lavori. "
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_project_task__create_date
+msgid "Created On"
+msgstr "Creato il"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__create_uid
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line_mixin__create_uid
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_role__create_uid
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_employee_forecast_role__create_uid
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_leave__create_uid
+#: model:ir.model.fields,field_description:project_forecast_line.field_project_task__create_uid
+#: model:ir.model.fields,field_description:project_forecast_line.field_resource_calendar_leaves__create_uid
+#: model:ir.model.fields,field_description:project_forecast_line.field_sale_order_line__create_uid
+msgid "Created by"
+msgstr "Creato da"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__create_date
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line_mixin__create_date
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_role__create_date
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_employee_forecast_role__create_date
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_leave__create_date
+#: model:ir.model.fields,field_description:project_forecast_line.field_resource_calendar_leaves__create_date
+#: model:ir.model.fields,field_description:project_forecast_line.field_sale_order_line__create_date
+msgid "Created on"
+msgstr "Creato il"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__currency_id
+msgid "Currency"
+msgstr "Valuta"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_employee_forecast_role__date_end
+msgid "Date End"
+msgstr "Data fine"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__date_from
+msgid "Date From"
+msgstr "Dalla data"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_employee_forecast_role__date_start
+msgid "Date Start"
+msgstr "Data inizio"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__date_to
+msgid "Date To"
+msgstr "Alla data"
+
+#. module: project_forecast_line
+#: model_terms:ir.ui.view,arch_db:project_forecast_line.view_forecast_line_search
+msgid "Date from"
+msgstr "Dalla data"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,help:project_forecast_line.field_forecast_line__date_from
+msgid "Date of the period start for this line"
+msgstr "La data del periodo inizia da questa riga"
+
+#. module: project_forecast_line
+#: model:ir.model.fields.selection,name:project_forecast_line.selection__res_company__forecast_line_granularity__day
+msgid "Day"
+msgstr "Giorno"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_sale_order__default_forecast_date_end
+msgid "Default Forecast Date End"
+msgstr "Data fine previsionale predefinita"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_sale_order__default_forecast_date_start
+msgid "Default Forecast Date Start"
+msgstr "Data inizio previsionale predefinita"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_role__description
+msgid "Description"
+msgstr "Descrizione"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__display_name
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line_mixin__display_name
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_role__display_name
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_employee_forecast_role__display_name
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_leave__display_name
+#: model:ir.model.fields,field_description:project_forecast_line.field_project_task__display_name
+#: model:ir.model.fields,field_description:project_forecast_line.field_resource_calendar_leaves__display_name
+#: model:ir.model.fields,field_description:project_forecast_line.field_sale_order_line__display_name
+msgid "Display Name"
+msgstr "Nome visualizzato"
+
+#. module: project_forecast_line
+#: model:ir.model,name:project_forecast_line.model_hr_employee
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__employee_id
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_employee_forecast_role__employee_id
+#: model_terms:ir.ui.view,arch_db:project_forecast_line.view_forecast_line_search
+msgid "Employee"
+msgstr "Dipendente"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__employee_forecast_role_id
+msgid "Employee Forecast Role"
+msgstr "Ruolo previsionale del dipendente"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__employee_resource_consumption_ids
+msgid "Employee Resource Consumption"
+msgstr "Consumo risorsa dipendente"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__employee_resource_forecast_line_id
+msgid "Employee Resource Forecast Line"
+msgstr "Riga previsionale risorsa dipendente"
+
+#. module: project_forecast_line
+#: model:ir.model,name:project_forecast_line.model_hr_employee_forecast_role
+msgid "Employee forecast role"
+msgstr "Ruolo previsionale del dipendente"
+
+#. module: project_forecast_line
+#: model:ir.model,name:project_forecast_line.model_forecast_role
+msgid "Employee role for task matching"
+msgstr "Ruolo del dipendente per corrispondenza attività"
+
+#. module: project_forecast_line
+#: model:ir.actions.act_window,name:project_forecast_line.action_forecast_lines
+#: model:ir.model,name:project_forecast_line.model_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__forecast_hours
+#: model:ir.model.fields.selection,name:project_forecast_line.selection__forecast_line__type__forecast
+#: model:ir.model.fields.selection,name:project_forecast_line.selection__project_project_stage__forecast_line_type__forecast
+#: model:ir.ui.menu,name:project_forecast_line.forecast_menu_root
+#: model:ir.ui.menu,name:project_forecast_line.menu_forecast_line_consolidated
+#: model_terms:ir.ui.view,arch_db:project_forecast_line.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:project_forecast_line.view_forecast_line_search
+msgid "Forecast"
+msgstr "Previsione"
+
+#. module: project_forecast_line
+#: model:ir.actions.act_window,name:project_forecast_line.action_forecast_lines_consolidated
+msgid "Forecast (Consolidated)"
+msgstr "Previsione (consolidata)"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,help:project_forecast_line.field_forecast_line__forecast_hours
+msgid ""
+"Forecast (in hours). Forecast is positive for resources which add forecast, "
+"such as employees, and negative for things which consume forecast, such as "
+"holidays, sales, or tasks."
+msgstr ""
+"Previsione (in ore). La previsione è positiva per risorse che incrementano "
+"il previsionale, come i dipendenti, e negativa per oggetti che consumano il "
+"previsionale, come le vacanze, le vendite o i lavori."
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_sale_order_line__forecast_date_end
+msgid "Forecast Date End"
+msgstr "Data fine previsionale"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_sale_order_line__forecast_date_start
+msgid "Forecast Date Start"
+msgstr "Data inizio previsionale"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_res_company__forecast_line_granularity
+#: model:ir.model.fields,field_description:project_forecast_line.field_res_config_settings__forecast_line_granularity
+msgid "Forecast Line Granularity"
+msgstr "Granularità riga previsionale"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_res_company__forecast_line_horizon
+#: model:ir.model.fields,field_description:project_forecast_line.field_res_config_settings__forecast_line_horizon
+msgid "Forecast Line Horizon"
+msgstr "Orizzonte riga previsionale"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_project_project_stage__forecast_line_type
+msgid "Forecast Line Type"
+msgstr "Tipo riga previsionale"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_res_config_settings__group_forecast_line_on_quotation
+msgid "Forecast Line on Quotations"
+msgstr "Riga previsionale nelle quotazioni"
+
+#. module: project_forecast_line
+#: model_terms:ir.ui.view,arch_db:project_forecast_line.res_config_settings_view_form
+msgid "Forecast Management"
+msgstr "Gestione previsionale"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_project_task__forecast_recomputation_trigger
+msgid "Forecast Recomputation Trigger"
+msgstr "Automatismo ricalcolo previsionale"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_product_product__forecast_role_id
+#: model:ir.model.fields,field_description:project_forecast_line.field_product_template__forecast_role_id
+#: model:ir.model.fields,field_description:project_forecast_line.field_project_task__forecast_role_id
+msgid "Forecast Role"
+msgstr "Ruolo previsionale"
+
+#. module: project_forecast_line
+#: model:ir.actions.act_window,name:project_forecast_line.action_forecast_roles
+#: model:ir.ui.menu,name:project_forecast_line.menu_forecast_role
+#: model_terms:ir.ui.view,arch_db:project_forecast_line.view_employee_form
+msgid "Forecast Roles"
+msgstr "Ruoli previsionali"
+
+#. module: project_forecast_line
+#: model:ir.actions.server,name:project_forecast_line.cron_forecast_lines_ir_actions_server
+#: model:ir.cron,cron_name:project_forecast_line.cron_forecast_lines
+#: model:ir.cron,name:project_forecast_line.cron_forecast_lines
+msgid "Forecast recomputation"
+msgstr "Ricalcolo previsionale"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__forecast_role_id
+msgid "Forecast role"
+msgstr "Ruolo previsionale"
+
+#. module: project_forecast_line
+#: model_terms:ir.ui.view,arch_db:project_forecast_line.view_forecast_line_search
+msgid "Group By"
+msgstr "Raggruppa per"
+
+#. module: project_forecast_line
+#: model:product.product,uom_name:project_forecast_line.product_product_consultant
+#: model:product.product,uom_name:project_forecast_line.product_product_dev
+#: model:product.product,uom_name:project_forecast_line.product_product_pm
+#: model:product.template,uom_name:project_forecast_line.product_product_consultant_product_template
+#: model:product.template,uom_name:project_forecast_line.product_product_dev_product_template
+#: model:product.template,uom_name:project_forecast_line.product_product_pm_product_template
+msgid "Hours"
+msgstr "Ore"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__id
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line_mixin__id
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_role__id
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_employee_forecast_role__id
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_leave__id
+#: model:ir.model.fields,field_description:project_forecast_line.field_project_task__id
+#: model:ir.model.fields,field_description:project_forecast_line.field_resource_calendar_leaves__id
+#: model:ir.model.fields,field_description:project_forecast_line.field_sale_order_line__id
+msgid "ID"
+msgstr "ID"
+
+#. module: project_forecast_line
+#: model:project.task,legend_normal:project_forecast_line.software_project_task_consultant
+#: model:project.task,legend_normal:project_forecast_line.software_project_task_consultant_cust_test
+#: model:project.task,legend_normal:project_forecast_line.software_project_task_consultant_internal_test
+#: model:project.task,legend_normal:project_forecast_line.software_project_task_dev
+#: model:project.task,legend_normal:project_forecast_line.software_project_task_pm
+msgid "In Progress"
+msgstr "In corso"
+
+#. module: project_forecast_line
+#: model:ir.model,name:project_forecast_line.model_hr_job
+msgid "Job Position"
+msgstr "Posizione lavorativa"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line____last_update
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line_mixin____last_update
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_role____last_update
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_employee_forecast_role____last_update
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_leave____last_update
+#: model:ir.model.fields,field_description:project_forecast_line.field_project_task____last_update
+#: model:ir.model.fields,field_description:project_forecast_line.field_resource_calendar_leaves____last_update
+#: model:ir.model.fields,field_description:project_forecast_line.field_sale_order_line____last_update
+msgid "Last Modified on"
+msgstr "Ultima modifica il"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_project_task__write_date
+msgid "Last Updated On"
+msgstr "Ultimo aggiornamento il"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__write_uid
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line_mixin__write_uid
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_role__write_uid
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_employee_forecast_role__write_uid
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_leave__write_uid
+#: model:ir.model.fields,field_description:project_forecast_line.field_project_task__write_uid
+#: model:ir.model.fields,field_description:project_forecast_line.field_resource_calendar_leaves__write_uid
+#: model:ir.model.fields,field_description:project_forecast_line.field_sale_order_line__write_uid
+msgid "Last Updated by"
+msgstr "Ultimo aggiornamento di"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__write_date
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line_mixin__write_date
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_role__write_date
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_employee_forecast_role__write_date
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_leave__write_date
+#: model:ir.model.fields,field_description:project_forecast_line.field_resource_calendar_leaves__write_date
+#: model:ir.model.fields,field_description:project_forecast_line.field_sale_order_line__write_date
+msgid "Last Updated on"
+msgstr "Ultimo aggiornamento il"
+
+#. module: project_forecast_line
+#: code:addons/project_forecast_line/models/hr_leave.py:0
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__hr_leave_id
+#, python-format
+msgid "Leave"
+msgstr "Permesso"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_employee__main_role_id
+msgid "Main Role"
+msgstr "Ruolo principale"
+
+#. module: project_forecast_line
+#: model:res.groups,name:project_forecast_line.group_forecast_line_on_quotation
+msgid "Manage Forecast Dates on Quotations"
+msgstr "Gestione date previsionale nelle quotazioni"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__res_model
+#: model_terms:ir.ui.view,arch_db:project_forecast_line.view_forecast_line_search
+msgid "Model"
+msgstr "Modello"
+
+#. module: project_forecast_line
+#: model:ir.model.fields.selection,name:project_forecast_line.selection__res_company__forecast_line_granularity__month
+msgid "Month"
+msgstr "Mese"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__name
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_role__name
+msgid "Name"
+msgstr "Nome"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,help:project_forecast_line.field_res_company__forecast_line_horizon
+#: model:ir.model.fields,help:project_forecast_line.field_res_config_settings__forecast_line_horizon
+#: model_terms:ir.ui.view,arch_db:project_forecast_line.res_config_settings_view_form
+msgid "Number of month for the forecast planning"
+msgstr "Numero di mesi per la pianificazione del previsionale"
+
+#. module: project_forecast_line
+#: model:project.project,name:project_forecast_line.software_project_1
+msgid "Odoo implementation"
+msgstr "Implementazione Odoo"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,help:project_forecast_line.field_res_company__forecast_line_granularity
+#: model:ir.model.fields,help:project_forecast_line.field_res_config_settings__forecast_line_granularity
+#: model_terms:ir.ui.view,arch_db:project_forecast_line.res_config_settings_view_form
+msgid "Periodicity of the forecast that will be generated"
+msgstr "Periodicità del previsionale che verrà generata"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_project_task__forecast_date_planned_end
+msgid "Planned end date"
+msgstr "Data fine pianificata"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_project_task__forecast_date_planned_start
+msgid "Planned start date"
+msgstr "Data inizio pianificata"
+
+#. module: project_forecast_line
+#: model:ir.model,name:project_forecast_line.model_product_template
+msgid "Product Template"
+msgstr "Modello prodotto"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__project_id
+#: model_terms:ir.ui.view,arch_db:project_forecast_line.view_forecast_line_search
+msgid "Project"
+msgstr "Progetto"
+
+#. module: project_forecast_line
+#: model:product.product,name:project_forecast_line.product_product_pm
+#: model:product.template,name:project_forecast_line.product_product_pm_product_template
+msgid "Project Manager"
+msgstr "Responsabile progetto"
+
+#. module: project_forecast_line
+#: model:ir.model,name:project_forecast_line.model_project_project_stage
+msgid "Project Stage"
+msgstr "Fase progetto"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_employee_forecast_role__rate
+msgid "Rate"
+msgstr "Valutazione"
+
+#. module: project_forecast_line
+#: model:project.task,legend_done:project_forecast_line.software_project_task_consultant
+#: model:project.task,legend_done:project_forecast_line.software_project_task_consultant_cust_test
+#: model:project.task,legend_done:project_forecast_line.software_project_task_consultant_internal_test
+#: model:project.task,legend_done:project_forecast_line.software_project_task_dev
+#: model:project.task,legend_done:project_forecast_line.software_project_task_pm
+msgid "Ready"
+msgstr "Pronto"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__res_id
+msgid "Record ID"
+msgstr "ID record"
+
+#. module: project_forecast_line
+#: model:ir.model,name:project_forecast_line.model_resource_calendar_leaves
+msgid "Resource Time Off Detail"
+msgstr "Dettaglio ferie risorsa"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_employee__role_ids
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_employee_forecast_role__role_id
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_job__role_id
+#: model_terms:ir.ui.view,arch_db:project_forecast_line.view_forecast_line_search
+msgid "Role"
+msgstr "Ruolo"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__sale_id
+msgid "Sale"
+msgstr "Vendita"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__sale_line_id
+msgid "Sale line"
+msgstr "Riga di vendita"
+
+#. module: project_forecast_line
+#: model:ir.model,name:project_forecast_line.model_sale_order
+msgid "Sales Order"
+msgstr "Ordine di vendita"
+
+#. module: project_forecast_line
+#: model:ir.model,name:project_forecast_line.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Riga ordine di vendita"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_hr_employee_forecast_role__sequence
+msgid "Sequence"
+msgstr "Sequenza"
+
+#. module: project_forecast_line
+#: model:ir.actions.act_window,name:project_forecast_line.forecast_config_settings_action
+#: model:ir.ui.menu,name:project_forecast_line.forecast_config_settings_menu_action
+msgid "Settings"
+msgstr "Impostazioni"
+
+#. module: project_forecast_line
+#: model:product.product,name:project_forecast_line.product_product_dev
+#: model:product.template,name:project_forecast_line.product_product_dev_product_template
+msgid "Software Developer"
+msgstr "Sviluppatore software"
+
+#. module: project_forecast_line
+#: model:ir.model,name:project_forecast_line.model_project_task
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__task_id
+msgid "Task"
+msgstr "Lavoro"
+
+#. module: project_forecast_line
+#: model:project.project,label_tasks:project_forecast_line.software_project_1
+msgid "Tasks"
+msgstr "Lavori"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,help:project_forecast_line.field_project_task__forecast_recomputation_trigger
+msgid "Technical field used to trigger the forecast recomputation"
+msgstr "Campo tecnico per attivare il ricalcolo del previsionale"
+
+#. module: project_forecast_line
+#: model:ir.model,name:project_forecast_line.model_hr_leave
+msgid "Time Off"
+msgstr "Ferie"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,field_description:project_forecast_line.field_forecast_line__type
+msgid "Type"
+msgstr "Tipo"
+
+#. module: project_forecast_line
+#: model:ir.model.fields.selection,name:project_forecast_line.selection__res_company__forecast_line_granularity__week
+msgid "Week"
+msgstr "Settimana"
+
+#. module: project_forecast_line
+#: model:ir.model,name:project_forecast_line.model_forecast_line_mixin
+msgid "mixin for models which generate forecast lines"
+msgstr "mixin per modelli che generano righe previsionali"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,help:project_forecast_line.field_forecast_line__employee_resource_forecast_line_id
+msgid ""
+"technical field giving the name of the resource (model=hr.employee.forecast."
+"role) line for that employee and that period"
+msgstr ""
+"campo tecnico che restituisce il nome della riga risorsa (modello=hr."
+"employee.forecast.role) per quel dipendente e quel periodo"
+
+#. module: project_forecast_line
+#: model:ir.model.fields,help:project_forecast_line.field_project_project_stage__forecast_line_type
+msgid "type of forecast lines created by the tasks of projects in that stage"
+msgstr "tipo righe previsionali create dai lavori dei progetti in quella fase"

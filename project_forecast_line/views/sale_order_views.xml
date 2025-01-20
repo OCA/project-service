@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_order_form" model="ir.ui.view">
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+            <field name="date_order" position="after">
+                <field
+                    name="default_forecast_date_start"
+                    groups="project_forecast_line.group_forecast_line_on_quotation"
+                />
+                <field
+                    name="default_forecast_date_end"
+                    groups="project_forecast_line.group_forecast_line_on_quotation"
+                />
+            </field>
+            <xpath
+                expr="//field[@name='order_line']/form//field[@name='product_id']"
+                position="before"
+            >
+                <field
+                    name="forecast_date_start"
+                    groups="project_forecast_line.group_forecast_line_on_quotation"
+                />
+                <field
+                    name="forecast_date_end"
+                    groups="project_forecast_line.group_forecast_line_on_quotation"
+                />
+            </xpath>
+            <xpath
+                expr="//field[@name='order_line']/tree//field[@name='customer_lead']"
+                position="after"
+            >
+                <field
+                    name="forecast_date_start"
+                    optional="show"
+                    groups="project_forecast_line.group_forecast_line_on_quotation"
+                />
+                <field
+                    name="forecast_date_end"
+                    optional="show"
+                    groups="project_forecast_line.group_forecast_line_on_quotation"
+                />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
